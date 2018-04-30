@@ -1,0 +1,11 @@
+SETTINGS:
+
+Chat ausblenden?
+
+
+TODO:
+
+Zeroing FFV
+Spendid Camera / Zeus
+StaminaBar/Stance
+Main Menu Intro Mission
