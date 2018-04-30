@@ -1,6 +1,7 @@
 class RscPicture;
 class RscText;
 class RscControlsGroup;
+class RscControlsGroupNoScrollbars;
 
 class RscInGameUI
 {
@@ -8,14 +9,14 @@ class RscInGameUI
     {
         class WeaponInfoControlsGroupLeft: RscControlsGroup
         {
-            x= 2 * safeZoneW + safezoneX;
+            x = 2 * safeZoneW + safezoneX;
         };
     };
     class RscWeaponZeroing: RscUnitInfo
     {
         class CA_Zeroing: RscText
         {
-            x= 2 * safeZoneW + safezoneX;
+            x = 2 * safeZoneW + safezoneX;
         };
     };
 
@@ -23,11 +24,14 @@ class RscInGameUI
     {
         class StaminaBar: RscPicture
         {
-            //x = safezoneW * 0.7 + safezoneX - pixelW * 5 - 10 * (((safezoneW / safezoneH) min 1.2) / 40);
-            //y = safezoneY + pixelH * 5;
-            x = safezoneX;
-            y = safezoneY;
-            //w = "10 * (((safezoneW / safezoneH) min 1.2) / 40)";
+            x = safezoneX + safeZoneW - pixelW * 5 - 10 * (((safezoneW / safezoneH) min 1.2) / 40);
+            y = safezoneY + safezoneH - pixelH * 5 - 0.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
         };
     };
+};
+
+class ace_advanced_fatigue_StaminaBarContainer: RscControlsGroupNoScrollbars
+{
+    x = safezoneX + safeZoneW - pixelW * 5 - 10 * (((safezoneW / safezoneH) min 1.2) / 40);
+    y = safezoneY + safezoneH - pixelH * 5 - 0.15 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
 };
