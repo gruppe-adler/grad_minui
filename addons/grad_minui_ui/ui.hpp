@@ -7,22 +7,10 @@ class RscInGameUI
 {
     class RscUnitInfo
     {
-        class WeaponInfoControlsGroupRight: RscControlsGroup
-        {
-            w = 0;
-            h = 0;
-            zarrck = "super cool";
-            class controls
-            {
-              class CA_BackgroundWeapon: RscPicture
-              {
-                zarrck = "super cool";
-                w = 0;
-                h = 0;
-                text = "";
-              }
-            }
-        };
+      class WeaponInfoControlsGroupLeft: RscControlsGroup
+      {
+          x = 2 * safeZoneW + safezoneX;
+      };
     };
     class RscWeaponZeroing
     {
