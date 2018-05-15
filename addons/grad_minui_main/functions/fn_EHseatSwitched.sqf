@@ -21,16 +21,16 @@ params ["_unit"];
 
 //if unit isn't on a FFV position only the handler has to be removed
 if !([_unit] call grad_minui_fnc_isFFV) exitWith {
-    [] call grad_minui_fnc_hideInfo;
-    if (grad_minui_ffv) then {
-        ["grad_minui_veh", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
-        grad_minui_ffv = false;
-    };
+  [] call grad_minui_fnc_hideWeaponInfo;
+  if (grad_minui_ffv) then {
+    ["grad_minui_veh", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+    grad_minui_ffv = false;
+  };
 };
 
 //show info if player switched from non FFV to FFV and setting is enabled
-if (!(grad_minui_ffv) && (missionNamespace getVariable ["grad_minui_setting_showInfoOnGetIn",true])) then {
-    ["all"] call grad_minui_fnc_showInfo;
+if (!(grad_minui_ffv) && (missionNamespace getVariable ["grad_minui_weaponInfo_showOnGetIn",true])) then {
+  ["all"] call grad_minui_fnc_showWeaponInfo;
 };
 
 grad_minui_mode = currentWeaponMode _unit;

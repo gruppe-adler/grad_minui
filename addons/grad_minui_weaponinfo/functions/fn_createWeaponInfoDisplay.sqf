@@ -1,5 +1,5 @@
 /*
- * Function: grad_minui_fnc_createDisplay
+ * Function: grad_minui_fnc_createWeaponInfoDisplay
  * Author: DerZade
  *
  * Shows display with given text on given layer
@@ -12,7 +12,7 @@
  * NONE
  *
  * Example:
- * ["testlayer", "TEST<br/>2nd Line"] call grad_minui_fnc_createDisplay;
+ * ["testlayer", "TEST<br/>2nd Line"] call grad_minui_fnc_createWeaponInfoDisplay;
  *
  * Public: No
  */
@@ -24,11 +24,11 @@ params ["_layer","_text"];
 private _color = profileNameSpace getVariable ['grad_minui_setting_color_hex','#d8d8d8'];
 _text = format ["<t color='%1'>%2</t>",_color, _text];
 
-private _layerName = format ["grad_minui_%1",_layer];
+private _layerName = format ["grad_minui_weaponInfo_%1",_layer];
 
-grad_minui_cutlayers pushBackUnique _layerName;
+grad_minui_wepaonInfo_cutlayers pushBackUnique _layerName;
 
-_layerName cutRsc ["grad_minui","PLAIN"];
-private _disp = uiNamespace getVariable "grad_minui";
+_layerName cutRsc ["grad_minui_weaponInfo", "PLAIN"];
+private _disp = uiNamespace getVariable "grad_minui_weaponInfo";
 
 (_disp displayCtrl 1) ctrlSetStructuredText parseText _text;

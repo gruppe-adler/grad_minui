@@ -23,11 +23,11 @@ params ["_unit", "", "", "", ["_spawn", false]];
 ["grad_minui", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 
 if (_spawn) then {
-    grad_minui_ffv = false;
+  grad_minui_ffv = false;
 };
 
 [_unit] call grad_minui_fnc_EHseatSwitched;
 
 if (_spawn) then {
-    ["all"] call grad_minui_fnc_showInfo;
+  ["all"] call grad_minui_fnc_showWeaponInfo;
 };

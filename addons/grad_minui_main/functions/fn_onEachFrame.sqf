@@ -17,26 +17,26 @@
  */
 
 if !(grad_minui_magazine isEqualTo currentMagazine player) then {
-    grad_minui_magazine = currentMagazine player;
-    ["magazine"] call grad_minui_fnc_showInfo;
+  grad_minui_magazine = currentMagazine player;
+  ["magazine"] call grad_minui_fnc_showWeaponInfo;
 };
 
 if !(grad_minui_mode isEqualTo currentWeaponMode player) then {
-    grad_minui_mode = currentWeaponMode player;
-    ["mode"] call grad_minui_fnc_showInfo;
+  grad_minui_mode = currentWeaponMode player;
+  ["mode"] call grad_minui_fnc_showWeaponInfo;
 };
 
 if !(grad_minui_muzzle isEqualTo currentMuzzle player) then {
-    grad_minui_muzzle = currentMuzzle player;
-    ["muzzle"] call grad_minui_fnc_showInfo;
+  grad_minui_muzzle = currentMuzzle player;
+  ["muzzle"] call grad_minui_fnc_showWeaponInfo;
 };
 
 if !(grad_minui_throwable isEqualTo (currentThrowable player)) then {
-    grad_minui_throwable = currentThrowable player;
-    ["throwable"] call grad_minui_fnc_showInfo;
+  grad_minui_throwable = currentThrowable player;
+  ["throwable"] call grad_minui_fnc_showWeaponInfo;
 };
 
 if !(grad_minui_zeroing isEqualTo currentZeroing player) then {
-    grad_minui_zeroing = currentZeroing player;
-    ["zeroing"] call grad_minui_fnc_showInfo;
+  grad_minui_zeroing = currentZeroing player;
+  ["zeroing"] call grad_minui_fnc_showWeaponInfo;
 };

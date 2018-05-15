@@ -20,14 +20,14 @@
 params ["_unit", "", "", "", ["_spawn", false]];
 
 //show all info upon spawn
-if (missionNamespace getVariable ["grad_minui_setting_showInfoOnGetOut",true] || _spawn) then {
-    ["all"] call grad_minui_fnc_showInfo;
+if (missionNamespace getVariable ["grad_minui_weaponInfo_showOnGetOut",true] || _spawn) then {
+  ["all"] call grad_minui_fnc_showWeaponInfo;
 };
 
 if !(isNil "grad_minui_ffv") then {
-    if (grad_minui_ffv) then {
-        ["grad_minui_veh", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
-    };
+  if (grad_minui_ffv) then {
+    ["grad_minui_veh", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+  };
 };
 
 //update variables

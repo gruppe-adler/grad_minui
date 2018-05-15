@@ -1,15 +1,14 @@
 class CfgPatches
 {
-	class grad_minui
+	class grad_minui_main
 	{
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"a3_ui_f", "grad_minui_ui"};
+		requiredAddons[] = {"A3_Data_F_Tank_Loadorder"};
 		version = "0.1";
 		author = "DerZade";
 	};
 };
 
-#include "RscTitles.hpp"
 #include "CfgFunctions.hpp"
