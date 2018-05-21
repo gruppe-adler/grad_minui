@@ -2,9 +2,10 @@ class settings
 {
   class stanceIndicator
   {
+    categoryName = "Stance Indicator";
     class enabled
     {
-      title = "Show stanceIndicator";
+      title = "Show vanilla stanceIndicator";
       type = "CHECKBOX";
       valueInfo = "true";
     };

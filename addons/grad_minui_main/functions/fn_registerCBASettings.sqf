@@ -21,13 +21,17 @@ if !(isClass(configFile >> "CfgPatches" >> "cba_settings")) exitWith {};
 
 {
   private _component = configName _x;
+  private _categoryName = [_x, "categoryName", _component] call BIS_fnc_returnConfigEntry;
 
   {
+    private _title = [_x, "title"] call BIS_fnc_returnConfigEntry;
+    private _tooltip = [_x, "tooltip", _title] call BIS_fnc_returnConfigEntry;
+
     private _params = [
       format ["grad_minui_%1_%2", _component, configName _x],
       [_x, "type"] call BIS_fnc_returnConfigEntry,
-      [_x, "title"] call BIS_fnc_returnConfigEntry,
-      MODDISPLAYNAME,
+      [_title, _tooltip],
+      [MODDISPLAYNAME, _categoryName],
       call compile ([_x, "valueInfo"] call BIS_fnc_returnConfigEntry),
       2
     ];

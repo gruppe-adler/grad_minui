@@ -2,6 +2,7 @@ class settings
 {
   class chat
   {
+    categoryName = "Chat";
     class enabled
     {
       title = "Show chat";
