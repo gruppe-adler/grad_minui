@@ -88,6 +88,10 @@ switch (toLower _type) do {
   case ("zeroing"): {
     private _text = format["<br/>%1m", currentZeroing player];
 
+    if !(isNull objectParent player) then {
+      _text = format["<br/>%1m", [] call grad_minui_fnc_FFVzeroing];
+    };
+
     ["zeroing", _text] call grad_minui_fnc_createWeaponInfoDisplay;
   };
   case ("throwable"): {

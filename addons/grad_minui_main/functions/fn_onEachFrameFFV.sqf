@@ -36,7 +36,7 @@ if !(grad_minui_throwable isEqualTo (currentThrowable player)) then {
   ["throwable"] call grad_minui_fnc_showWeaponInfo;
 };
 
-if !(grad_minui_zeroing isEqualTo currentZeroing player) then {     /*TODO: fix zeroing*/
-  grad_minui_zeroing = currentZeroing player;                     /*TODO: fix zeroing*/
+if !(grad_minui_zeroing isEqualTo ([] call grad_minui_fnc_FFVzeroing)) then {
+  grad_minui_zeroing = ([] call grad_minui_fnc_FFVzeroing);
   ["zeroing"] call grad_minui_fnc_showWeaponInfo;
 };

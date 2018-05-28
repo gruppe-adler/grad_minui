@@ -9,6 +9,7 @@ class CfgFunctions
       class createWeaponInfoDisplay {};
       class hideWeaponInfo {};
       class showWeaponInfo {};
+      class FFVzeroing {};
     };
   };
 };
