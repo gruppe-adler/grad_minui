@@ -7,11 +7,11 @@ class RscInGameUI
   {
     class StanceIndicatorBackground: RscPicture
     {
-      w="(3.7 * (((safezoneW / safezoneH) min 1.2) / 40)) * (parseNumber (missionNamespace getVariable ['grad_minui_stanceIndicator_enabled',true]))";
+      w="(3.7 * (((safezoneW / safezoneH) min 1.2) / 40)) * (parseNumber (missionNamespace getVariable ['grad_minui_stanceIndicator_enabled',false]))";
     };
     class StanceIndicator: RscPictureKeepAspect
     {
-      w="(3.7 * (((safezoneW / safezoneH) min 1.2) / 40)) * (parseNumber (missionNamespace getVariable ['grad_minui_stanceIndicator_enabled',true]))";
+      w="(3.7 * (((safezoneW / safezoneH) min 1.2) / 40)) * (parseNumber (missionNamespace getVariable ['grad_minui_stanceIndicator_enabled',false]))";
     };
   };
 };

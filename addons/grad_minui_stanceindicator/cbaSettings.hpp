@@ -8,7 +8,7 @@ class settings
       title = "Show vanilla stanceIndicator";
       tooltip = "You may need to restart your game to apply this setting.";
       type = "CHECKBOX";
-      valueInfo = "true";
+      valueInfo = "false";
     };
   };
 };
