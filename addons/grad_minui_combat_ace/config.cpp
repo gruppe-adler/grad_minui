@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class grad_minui_staminabar
+	class grad_minui_combat_ace
 	{
 		units[] = {};
 		weapons[] = {};
