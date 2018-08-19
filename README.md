@@ -33,6 +33,7 @@ Gruppe Adler MinUI (GRAD_minui) is a mod for Arma 3, which removes and replaces 
 - Removed Command Bar
 - Removed DefaultAction-Icon
 - Removed Stance Indicator
+- Moved Stamina Bar to bottom right corner
 - Replaced vanilla Weapon Info with custom Weapon Info
   - Visible for two seconds (plus one second fad-out)
   - Only showes stats when there was a change (Fire-mode changes -> Only new fire-mode is shown)
@@ -40,6 +41,7 @@ Gruppe Adler MinUI (GRAD_minui) is a mod for Arma 3, which removes and replaces 
 - CBA settings to undo behavior of the changes above 
 - CBA settings to change behavior of custom weapon info
 - CBA keybinds to show parts of / whole weapon info
+- ACE compability
 
 ## Dependencies:
 None 🙌 Although [CBA_A3](https://github.com/CBATeam/CBA_A3) is recommended, for a lot of customization through settings and keybinds. 
