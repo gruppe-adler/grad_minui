@@ -41,7 +41,7 @@ Gruppe Adler MinUI (GRAD_minui) is a mod for Arma 3, which removes and replaces 
 - CBA settings to undo behavior of the changes above 
 - CBA settings to change behavior of custom weapon info
 - CBA keybinds to show parts of / whole weapon info
-- ACE compability
+- ACE compatibility
 
 ## Dependencies:
 None 🙌 Although [CBA_A3](https://github.com/CBATeam/CBA_A3) is recommended, for a lot of customization through settings and keybinds. 
