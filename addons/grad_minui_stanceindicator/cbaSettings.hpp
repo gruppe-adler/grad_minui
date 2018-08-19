@@ -2,11 +2,11 @@ class settings
 {
   class stanceIndicator
   {
-    categoryName = "Stance Indicator";
+    categoryName = "$STR_GRAD_MINUI_STANCEINDICATOR";
     class enabled
     {
-      title = "Show vanilla stanceIndicator";
-      tooltip = "You may need to restart your game to apply this setting.";
+      title = "$STR_GRAD_MINUI_STANCEINDICATOR_ENABLED";
+      tooltip = "$STR_GRAD_MINUI_MAIN_MAY_HAVE_TO_RESTART";
       type = "CHECKBOX";
       valueInfo = "false";
     };

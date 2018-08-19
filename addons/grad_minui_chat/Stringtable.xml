@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="grad_minui">
+	<Package name="chat">
+		<Container name="cba_settings">
+			<Key ID="STR_GRAD_MINUI_CHAT">
+				<Original>Chat</Original>
+				<English>Chat</English>
+				<German>Chat</German>
+			</Key>
+      <Key ID="STR_GRAD_MINUI_CHAT_ENABLED">
+				<Original>Show Chat</Original>
+				<English>Show Chat</English>
+				<German>Chat anzeigen</German>
+			</Key>
+      <Key ID="STR_GRAD_MINUI_CHAT_ENABLED_MAP">
+				<Original>Show Chat on map</Original>
+				<English>Show Chat on map</English>
+				<German>Chat auf Karte anzeigen</German>
+			</Key>
+		</Container>
+	</Package>
+</Project>

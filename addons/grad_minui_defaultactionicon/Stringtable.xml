@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="grad_minui">
+	<Package name="defaultactionicon">
+		<Container name="cba_settings">
+			<Key ID="STR_GRAD_MINUI_DEFAULTACTIONICON">
+				<Original>DefaultAction-Icon</Original>
+				<English>DefaultAction-Icon</English>
+				<German>Standardaktion-Icon</German>
+			</Key>
+      <Key ID="STR_GRAD_MINUI_DEFAULTACTIONICON_SIZE">
+				<Original>DefaultAction-Icon Size</Original>
+				<English>DefaultAction-Icon Size</English>
+				<German>Standardaktion-Icon Größe</German>
+			</Key>
+		</Container>
+	</Package>
+</Project>

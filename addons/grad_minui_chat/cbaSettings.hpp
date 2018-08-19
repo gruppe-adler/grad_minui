@@ -2,19 +2,19 @@ class settings
 {
   class chat
   {
-    categoryName = "Chat";
+    categoryName = "$STR_GRAD_MINUI_CHAT";
     class enabled
     {
-      title = "Show chat";
+      title = "$STR_GRAD_MINUI_CHAT_ENABLED";
       type = "CHECKBOX";
-      tooltip = "You may need to restart your game to apply this setting.";
+      tooltip = "$STR_GRAD_MINUI_MAIN_MAY_HAVE_TO_RESTART";
       valueInfo = "true";
     };
     class enabled_map
     {
-      title = "Show chat on map";
+      title = "$STR_GRAD_MINUI_CHAT_ENABLED_MAP";
       type = "CHECKBOX";
-      tooltip = "You may need to restart your game to apply this setting.";
+      tooltip = "$STR_GRAD_MINUI_MAIN_MAY_HAVE_TO_RESTART";
       valueInfo = "true";
     };
   };

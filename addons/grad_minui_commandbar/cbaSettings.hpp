@@ -2,11 +2,11 @@ class settings
 {
   class commandbar
   {
-    categoryName = "Command Bar";
+    categoryName = "$STR_GRAD_MINUI_COMMANDBAR";
     class enabled
     {
-      title = "Show vanilla commandBar";
-      tooltip = "You may need to restart your game to apply this setting.";
+      title = "$STR_GRAD_MINUI_COMMANDBAR_ENABLED";
+      tooltip = "$STR_GRAD_MINUI_MAIN_MAY_HAVE_TO_RESTART";
       type = "CHECKBOX";
       valueInfo = "false";
       script = "{profileNamespace setVariable ['grad_minui_commandbar_enabled', _this];}";
