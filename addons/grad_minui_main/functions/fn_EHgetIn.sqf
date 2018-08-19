@@ -17,17 +17,17 @@
  * Public: No
  */
 
-params ["_unit", "", "", "", ["_spawn", false]];
+params ["_unit", "", "", "", ["_postInit", false]];
 
 //remove onEachFrame-Handler
 ["grad_minui", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 
-if (_spawn) then {
+if (_postInit) then {
   grad_minui_ffv = false;
 };
 
 [_unit] call grad_minui_fnc_EHseatSwitched;
 
-if (_spawn) then {
+if (_postInit) then {
   ["all"] call grad_minui_fnc_showWeaponInfo;
 };

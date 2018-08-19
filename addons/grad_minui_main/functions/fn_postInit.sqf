@@ -31,8 +31,10 @@ player addEventHandler ["GetOutMan", grad_minui_fnc_EHgetOut];
 
 grad_minui_wepaonInfo_cutlayers = [];
 
-if (isNull objectParent player) then { //on foot
+if (isNull objectParent player) then {
+  //on foot
   [player, nil, nil, nil, true] call grad_minui_fnc_EHgetOut;
 } else {
+  //in vehicle
   [player, nil, nil, nil, true] call grad_minui_fnc_EHgetIn;
 }

@@ -16,6 +16,10 @@
  *
  * Public: No
  */
+
+#define DASH_025 "<img image='\grad_minui_weaponInfo\data\dash25_ca.paa' />"
+#define DASH_100 "<img image='\grad_minui_weaponInfo\data\dash100_ca.paa' />"
+
 params ["_type"];
 
 switch (toLower _type) do {
@@ -24,31 +28,36 @@ switch (toLower _type) do {
     ["zeroing"] call grad_minui_fnc_showWeaponInfo;
     ["throwable"] call grad_minui_fnc_showWeaponInfo;
   };
-  case ("mode"): {
-    private _text = switch (tolower currentWeaponMode player) do {
+  case ("mode"): { //********************************************************** MODE ****************************************************************
+    private _currentWeaponMode = tolower currentWeaponMode player;
+    private _currentWeapon = tolower currentWeapon player;
+    private _currentMuzzle = toLower currentMuzzle player;
+
+    //dashes
+    private _text = switch (_currentWeaponMode) do {
       case ("single"): {
-        "<img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' />";
+        ([DASH_025, DASH_025, DASH_025, DASH_025, DASH_100] joinString "");
       };
       case ("burst"): {
-        "<img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' />";
+        ([DASH_025, DASH_025, DASH_025, DASH_100, DASH_100] joinString "");
       };
       case ("fullauto"): {
-        "<img image='\grad_minui_weaponInfo\data\dash100_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' />";
+        ([DASH_100, DASH_100, DASH_100, DASH_100, DASH_100] joinString "");
       };
       //if the weaponmode is non of the above we will check the config
       default {
-        switch (getText (configFile >> "CfgWeapons" >> (currentMuzzle player) >> (currentWeaponMode player) >> "textureType")) do {
+        switch (getText (configFile >> "CfgWeapons" >> (currentMuzzle player) >> _currentWeaponMode >> "textureType")) do {
           case ("semi"): {
-            "<img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' />";
+            ([DASH_025, DASH_025, DASH_025, DASH_025, DASH_100] joinString "");
           };
           case ("dual"): {
-            "<img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' />";
+            ([DASH_025, DASH_025, DASH_025, DASH_100, DASH_100] joinString "");
           };
           case ("full"): {
-            "<img image='\grad_minui_weaponInfo\data\dash100_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash100_ca.paa' />";
+            ([DASH_100, DASH_100, DASH_100, DASH_100, DASH_100] joinString "");
           };
           default {
-            "<img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' />";
+            ([DASH_025, DASH_025, DASH_025, DASH_025, DASH_025] joinString "");
           };
         };
       };
@@ -57,18 +66,19 @@ switch (toLower _type) do {
     //ace safemode
     if (isClass(configFile >> "CfgPatches" >> "ace_safemode")) then {
       private _safedWeapons = +(player getVariable ["ACE_safemode_safedWeapons",[]]);
-      if ((currentWeapon player) in _safedWeapons) then {
+      _safedWeapons = _safedWeapons apply {toLower _x};
+      if (_currentWeapon in _safedWeapons) then {
 
         //ace needs some time to update the variable so in the worst case the weapon will be displayed as safed although it isn't
         //so we're going to check for the next 0.1 seconds and call this function again if anything changed
         [{!((_this select 0) isEqualTo ((_this select 1) getVariable ["ACE_safemode_safedWeapons",[]]))}, {["mode"] remoteExec ["grad_minui_fnc_showWeaponInfo", (_this select 1)];}, [_safedWeapons, player], 0.2, {}] call CBA_fnc_waitUntilAndExecute;
-        _text = "<img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' /><img image='\grad_minui_weaponInfo\data\dash25_ca.paa' />";
+        _text = [DASH_025, DASH_025, DASH_025, DASH_025, DASH_025] joinString "";
       };
     };
 
     //add muzzle and magazine to weapon mode if is other than primary muzzle of weapon (= is under barrel weapon)
-    if !((toLower currentMuzzle player) isEqualTo (toLower currentWeapon player)) then {
-      _text = format ["%1   %2", getText (configFile >> "CfgWeapons" >> (currentWeapon player) >> (currentMuzzle player) >> "displayName"), _text];
+    if !(_currentMuzzle isEqualTo _currentWeapon) then {
+      _text = format ["%1   %2", getText (configFile >> "CfgWeapons" >> _currentWeapon >> _currentMuzzle >> "displayName"), _text];
 
       //add magazine info if any is loaded
       private _mag = getText(configFile >> "CfgMagazines" >> (currentMagazine player) >> "DisplayNameShort");
@@ -77,7 +87,6 @@ switch (toLower _type) do {
       };
     };
 
-
     //no mag loaded == red text
     if (currentMagazine player isEqualTo "") then {
       _text = format ["<t color='#BB0000'>%1</t>",_text];
@@ -85,7 +94,7 @@ switch (toLower _type) do {
 
     ["weaponMode", _text] call grad_minui_fnc_createWeaponInfoDisplay;
   };
-  case ("zeroing"): {
+  case ("zeroing"): { //******************************************************* ZEROING *************************************************************
     private _text = format["<br/>%1m", currentZeroing player];
 
     if !(isNull objectParent player) then {
@@ -94,23 +103,24 @@ switch (toLower _type) do {
 
     ["zeroing", _text] call grad_minui_fnc_createWeaponInfoDisplay;
   };
-  case ("throwable"): {
-    private _text = if ((currentThrowable player) isEqualTo []) then {
+  case ("throwable"): { //***************************************************** THROWABLE ***********************************************************
+    private _currentThrowable = currentThrowable player;
+    private _text = if (_currentThrowable isEqualTo []) then {
       "<br/><t color='#BB0000'>NONE</t><t color='#00ffffff'>     0000m</t>";
     } else {
-      format["<br/>%1<t color='#00ffffff'>     0000m</t>", getText (configFile >> "CfgMagazines" >> (currentThrowable player) select 0 >> "displayNameShort")];
+      format["<br/>%1<t color='#00ffffff'>     0000m</t>", getText (configFile >> "CfgMagazines" >> _currentThrowable select 0 >> "displayNameShort")];
     };
 
     ["throwable", _text] call grad_minui_fnc_createWeaponInfoDisplay;
   };
-  case ("magazine"): {
-    _mag = getText(configFIle >> "CfgMagazines" >> (currentMagazine player) >> "DisplayNameShort");
+  case ("magazine"): { //****************************************************** MAGAZINE ************************************************************
+    _mag = getText(configFile >> "CfgMagazines" >> (currentMagazine player) >> "DisplayNameShort");
     if (_mag == "") exitWith{};
 
     //layer "weaponMode" to make sure this gets overwritten by the weaponMode display because this also shows the magazine
     ["weaponMode", _mag] call grad_minui_fnc_createWeaponInfoDisplay;
   };
-  case ("muzzle"): {
+  case ("muzzle"): { //******************************************************** MUZZLE **************************************************************
     ["mode"] call grad_minui_fnc_showWeaponInfo;
     ["zeroing"] call grad_minui_fnc_showWeaponInfo;
   };

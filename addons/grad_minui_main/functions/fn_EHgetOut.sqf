@@ -17,10 +17,10 @@
  * Public: No
  */
 
-params ["_unit", "", "", "", ["_spawn", false]];
+params ["_unit", "", "", "", ["_postInit", false]];
 
 //show all info upon spawn
-if (missionNamespace getVariable ["grad_minui_weaponInfo_showOnGetOut",true] || _spawn) then {
+if (missionNamespace getVariable ["grad_minui_weaponInfo_showOnGetOut",true] || _postInit) then {
   ["all"] call grad_minui_fnc_showWeaponInfo;
 };
 

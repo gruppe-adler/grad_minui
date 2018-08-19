@@ -24,11 +24,13 @@ params ["_layer","_text"];
 private _color = profileNameSpace getVariable ['grad_minui_setting_color_hex','#d8d8d8'];
 _text = format ["<t color='%1'>%2</t>",_color, _text];
 
-private _layerName = format ["grad_minui_weaponInfo_%1",_layer];
-
+//layer name
+private _layerName = format ["grad_minui_weaponInfo_%1", toLower _layer];
 grad_minui_wepaonInfo_cutlayers pushBackUnique _layerName;
 
+//create display
 _layerName cutRsc ["grad_minui_weaponInfo", "PLAIN"];
 private _disp = uiNamespace getVariable "grad_minui_weaponInfo";
 
+//add text 
 (_disp displayCtrl 1) ctrlSetStructuredText parseText _text;
