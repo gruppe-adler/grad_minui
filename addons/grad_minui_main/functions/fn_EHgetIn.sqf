@@ -7,6 +7,7 @@
  *
  * Arguments:
  * 0: unit <OBJECT>
+ * 4: postInit <BOOL>
  *
  * Return Value:
  * NONE
