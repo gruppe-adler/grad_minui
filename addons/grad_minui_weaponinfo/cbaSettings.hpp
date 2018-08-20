@@ -37,7 +37,6 @@ class settings
       type = "COLOR";
       valueInfo = "[0.85, 0.85, 0.85, 1]";
       tooltip = "$STR_GRAD_MINUI_WEAPONINFO_COLOR_TIP";
-      script = "{profileNameSpace setVariable ['grad_minui_setting_color_hex', _this call BIS_fnc_colorRGBAtoHTML];}";
     };
   };
 };

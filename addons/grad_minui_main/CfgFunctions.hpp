@@ -15,6 +15,8 @@ class CfgFunctions
       class postInit {postInit = 1;};
       class registerCBAKeybinds {};
       class registerCBASettings {};
+      class setSetting {};
+      class setting {};
     };
   };
 };

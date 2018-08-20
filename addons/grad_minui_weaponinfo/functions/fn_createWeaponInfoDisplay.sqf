@@ -21,7 +21,7 @@ disableSerialization;
 params ["_layer","_text"];
 
 //apply color
-private _color = profileNameSpace getVariable ['grad_minui_setting_color_hex','#d8d8d8'];
+private _color = (["weaponinfo_color"] call grad_minui_fnc_setting) call BIS_fnc_colorRGBAtoHTML;
 _text = format ["<t color='%1'>%2</t>",_color, _text];
 
 //layer name

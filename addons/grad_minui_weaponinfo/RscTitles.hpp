@@ -4,8 +4,9 @@ class RscTitles
   {
     onLoad = "uiNamespace setVariable ['grad_minui_weaponInfo',_this select 0];";
     fadeIn = 0;
-    duration = "missionNamespace getVariable ['grad_minui_weaponInfo_duration', 2]";
-    fadeOut = "missionNamespace getVariable ['grad_minui_weaponInfo_fadeOutDuration', 1]";
+    //TODO:
+    duration = "['weaponinfo_duration'] call (uiNamespace getvariable 'grad_minui_fnc_setting')";
+    fadeOut = "['weaponinfo_fadeoutduration'] call (uiNamespace getvariable 'grad_minui_fnc_setting')";
     idd = -1;
     class controlsBackground {};
     class controls

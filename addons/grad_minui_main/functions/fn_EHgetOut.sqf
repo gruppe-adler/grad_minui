@@ -20,7 +20,7 @@
 params ["_unit", "", "", "", ["_postInit", false]];
 
 //show all info upon spawn
-if (missionNamespace getVariable ["grad_minui_weaponInfo_showOnGetOut",true] || _postInit) then {
+if (['weaponInfo_showOnGetOut'] call grad_minui_fnc_setting || _postInit) then {
   ["all"] call grad_minui_fnc_showWeaponInfo;
 };
 
