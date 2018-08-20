@@ -26,25 +26,25 @@
     href="https://www.youtube.com/user/gruppeadler">YouTube</a> | <a href="https://twitter.com/Gruppe_Adler">Twitter</a></strong></sup>
 </p>
 
-Gruppe Adler MinUI (GRAD_minui) is a mod for Arma 3, which removes and replaces some of the vanilla ingame user interface with it's own more minimalistic components to improve immersion and reduce screen cluttering. At the moment this mod just affects infantry gameplay (including FFV).
+Gruppe Adler MinUI (GRAD_minui) is an interface mod for Arma 3 which removes some UI components and substitutes some of the vanilla elements with minimalistic replacements to improve immersion and reduce screen cluttering. At the moment this mod is aimed at infantry gameplay (including FFV).
 
 ## Features
-- Removed chat (except when map is open)
-- Removed Command Bar
-- Removed DefaultAction-Icon
-- Removed Stance Indicator
-- Moved Stamina Bar to bottom right corner
-- Replaced vanilla Weapon Info with custom Weapon Info
+- Removes chat (except when map is open)
+- Removes Command Bar
+- Removes DefaultAction-Icon
+- Removes Stance Indicator
+- Moves Stamina Bar to bottom right corner
+- Replaces vanilla Weapon Info with custom Weapon Info
   - Visible for two seconds (plus one second fad-out)
-  - Only showes stats when there was a change (Fire-mode changes -> Only new fire-mode is shown)
-  - Reacts to changes of zeroing, fire-mode, muzzle, magazines and selected throwable
+  - Only shows stats when the status changes (Fire-mode changes -> Only new fire-mode is shown)
+  - Reacts to changes of zeroing, fire-mode, muzzle, magazines, and selected throwable
 - CBA settings to undo behavior of the changes above 
-- CBA settings to change behavior of custom weapon info
-- CBA keybinds to show parts of / whole weapon info
+- CBA settings to change behavior of custom Weapon Info
+- CBA keybinds to show partial or full Weapon Info
 - ACE compatibility
 
 ## Dependencies:
-None 🙌 Although [CBA_A3](https://github.com/CBATeam/CBA_A3) is recommended, for a lot of customization through settings and keybinds. 
+None 🙌 However, [CBA_A3](https://github.com/CBATeam/CBA_A3) is recommended for a lot of customization through settings and keybinds. 
 
 ## License
 This project is licensed under [**GRAD APLv1.1**](https://github.com/DerZade/grad_minui/blob/master/LICENSE).  
