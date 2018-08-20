@@ -2,7 +2,7 @@
  * Function: grad_minui_fnc_isFFV
  * Author: DerZade
  *
- * Chechs wether given unit is in a FFV turret
+ * Checks wether given unit is in a FFV turret
  *
  * Arguments:
  * 0: unit <OBJECT>
