@@ -5,12 +5,12 @@
 			<Key ID="STR_GRAD_MINUI_DEFAULTACTIONICON">
 				<Original>DefaultAction-Icon</Original>
 				<English>DefaultAction-Icon</English>
-				<German>Standardaktion-Icon</German>
+				<German>Standardaktion-Symbol</German>
 			</Key>
       <Key ID="STR_GRAD_MINUI_DEFAULTACTIONICON_SIZE">
 				<Original>DefaultAction-Icon Size</Original>
 				<English>DefaultAction-Icon Size</English>
-				<German>Standardaktion-Icon Größe</German>
+				<German>Standardaktion-Symbol Größe</German>
 			</Key>
 		</Container>
 	</Package>
