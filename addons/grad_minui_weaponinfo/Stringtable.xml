@@ -25,7 +25,7 @@
       <Key ID="STR_GRAD_MINUI_WEAPONINFO_FADEOUTDURATION">
 				<Original>Fadeout Duration</Original>
 				<English>Fadeout Duration</English>
-				<German>Ausblende Dauer</German>
+				<German>Ausblendedauer</German>
 			</Key>
       <Key ID="STR_GRAD_MINUI_WEAPONINFO_COLOR">
 				<Original>Color</Original>
@@ -43,14 +43,14 @@
 				<German>Waffen-Info automatisch beim Einsteigen anzeigen.</German>
 			</Key>
       <Key ID="STR_GRAD_MINUI_WEAPONINFO_DURATION_TIP">
-				<Original>Duration Weapon Info is visible.</Original>
-				<English>Duration Weapon Info is visible.</English>
-				<German>Wie lange die Waffen-Info sichtbar ist.</German>
+				<Original>Duration of Weapon Info being visible.</Original>
+				<English>Duration of Weapon Info being visible.</English>
+				<German>Dauer der Waffen-Info Sichtbarkeit.</German>
 			</Key>
       <Key ID="STR_GRAD_MINUI_WEAPONINFO_FADEOUTDURATION_TIP">
 				<Original>Fadeout duration of weaponInfo.</Original>
 				<English>Fadeout duration of weaponInfo.</English>
-				<German>Wie lange die Waffen-Info zum Ausblenden braucht</German>
+				<German>Dauer der Waffen-Info Ausblendung.</German>
 			</Key>
       <Key ID="STR_GRAD_MINUI_WEAPONINFO_COLOR_TIP">
 				<Original>WeaponInfo Color</Original>
@@ -60,9 +60,9 @@
 		</Container>
 		<Container name="cba_keybinds">
 			<Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_ALL">
-				<Original>Show whole Weapon Info</Original>
-				<English>Show whole Weapon Info</English>
-				<German>Ganze Waffen-Info anzeigen</German>
+				<Original>Show full Weapon Info</Original>
+				<English>Show full Weapon Info</English>
+				<German>Vollständige Waffen-Info anzeigen</German>
 			</Key>
       <Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_ZEROING">
 				<Original>Show current Zeroing</Original>
@@ -77,7 +77,7 @@
       <Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_THROWABLE">
 				<Original>Show selected Throwable</Original>
 				<English>Show selected Throwable</English>
-				<German>Aktulles Wurfobjekt anzeigen</German>
+				<German>Aktuelles Wurfobjekt anzeigen</German>
 			</Key>
       <Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_MAGAZINE">
 				<Original>Show loaded Magazine</Original>
