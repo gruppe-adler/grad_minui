@@ -38,13 +38,13 @@ Gruppe Adler MinUI (GRAD_minui) is an interface mod for Arma 3 which removes som
   - Visible for two seconds (plus one second fad-out)
   - Only shows stats when the status changes (Fire-mode changes -> Only new fire-mode is shown)
   - Reacts to changes of zeroing, fire-mode, muzzle, magazines, and selected throwable
-- CBA settings to undo behavior of the changes above 
-- CBA settings to change behavior of custom Weapon Info
+- [Settings](https://github.com/DerZade/grad_minui/wiki/Settings) to undo behavior of the changes above 
+- [Settings](https://github.com/DerZade/grad_minui/wiki/Settings) to change behavior of custom Weapon Info
 - CBA keybinds to show partial or full Weapon Info
 - ACE compatibility
 
 ## Dependencies:
-None 🙌 However, [CBA_A3](https://github.com/CBATeam/CBA_A3) is recommended for a lot of customization through settings and keybinds. 
+None 🙌 However, [CBA_A3](https://github.com/CBATeam/CBA_A3) is recommended for a lot of easy customization through settings and keybinds. 
 
 ## License
 This project is licensed under [**GRAD APLv1.1**](https://github.com/DerZade/grad_minui/blob/master/LICENSE).  
