@@ -34,7 +34,7 @@ Gruppe Adler MinUI (GRAD_minui) is an interface mod for Arma 3 which removes som
 - Removes DefaultAction-Icon
 - Removes Stance Indicator
 - Moves Stamina Bar to bottom right corner
-- Replaces vanilla Weapon Info with custom Weapon Info
+- Replaces vanilla Weapon Info with custom Weapon Info (only when on foot or FFV)
   - Visible for two seconds (plus one second fade-out)
   - Only shows stats when the status changes (Fire-mode changes -> Only new fire-mode is shown)
   - Reacts to changes of zeroing, fire-mode, muzzle, magazines, and selected throwable
