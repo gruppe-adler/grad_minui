@@ -29,6 +29,8 @@ switch (toLower _type) do {
     ["throwable"] call grad_minui_fnc_showWeaponInfo;
   };
   case ("mode"): { //********************************************************** MODE ****************************************************************
+    if (currentWeaponMode player isEqualType 0) exitWith {};
+
     private _currentWeaponMode = tolower currentWeaponMode player;
     private _currentWeapon = tolower currentWeapon player;
     private _currentMuzzle = toLower currentMuzzle player;
