@@ -16,6 +16,9 @@
  * Public: No
  */
 
+// exit if player is turned in
+if !(isTurnedOut player) exitWith {};
+
 if !(grad_minui_magazine isEqualTo currentMagazine player) then {
   grad_minui_magazine = currentMagazine player;
   ["magazine"] call grad_minui_fnc_showWeaponInfo;

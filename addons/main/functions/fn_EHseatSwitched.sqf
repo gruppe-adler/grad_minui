@@ -29,7 +29,7 @@ if !([_unit] call grad_minui_fnc_isFFV) exitWith {
 };
 
 //show info if player switched from non FFV to FFV and setting is enabled
-if (!(grad_minui_ffv) && ['weaponInfo_showOnGetIn'] call grad_minui_fnc_setting) then {
+if (!(grad_minui_ffv) && ['weaponInfo_showOnGetIn'] call grad_minui_fnc_setting && isTurnedOut _unit) then {
   ["all"] call grad_minui_fnc_showWeaponInfo;
 };
 
