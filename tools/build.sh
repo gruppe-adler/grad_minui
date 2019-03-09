@@ -54,7 +54,7 @@ keyFilePath="$baseDir/build_keys/$keyFileName"
 #copy public key into key directory
 rm -r "${releaseDir}/keys/" # remove all existing keys in directory
 mkdir -p "${releaseDir}/keys"
-cp "${buildKeyPath}.bikey" "${releaseDir}/keys/$keyFileName.bikey" # copy bikey to release directory
+cp "${keyFilePath}.bikey" "${releaseDir}/keys/$keyFileName.bikey" # copy bikey to release directory
 
 build_pbo() {
 	componentname=`basename "${1}"`
