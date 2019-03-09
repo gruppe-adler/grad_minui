@@ -1,0 +1,13 @@
+name = "Gruppe Adler MinUI";
+author = "DerZade";
+picture = "Adler.paa";
+actionName = "Website";
+action = "https://www.gruppe-adler.de/";
+description = "Gruppe Adler MinUI";
+logo = "Adler.paa";
+logoOver = "Adler.paa";
+tooltip = "Gruppe Adler MinUI";
+overview = "Gruppe Adler MinUI (GRAD_minui) is an interface mod for Arma 3 which removes some UI components and substitutes some of the vanilla elements with minimalistic replacements to improve immersion and reduce screen cluttering.";
+overviewPicture = "Adler.paa";
+overviewText = "";
+overviewFootnote = "";
