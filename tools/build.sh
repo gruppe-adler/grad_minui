@@ -3,7 +3,7 @@
 zip_path="zip.exe"
 modname="@grad_minui"
 pboprefix="grad_minui_"
-RAW_VERSION="0.5"
+# RAW_VERSION="0.5.0"
 
 ### AS AS USER, DONT EDIT BELOW THIS LINE ###
 
