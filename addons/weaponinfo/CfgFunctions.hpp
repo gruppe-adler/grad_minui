@@ -5,7 +5,7 @@ class CfgFunctions
     tag = "grad_minui";
     class weaponInfo
     {
-      file = "\grad_minui_weaponInfo\functions";
+      file = "x\grad_minui\addons\weaponInfo\functions";
       class createWeaponInfoDisplay {};
       class hideWeaponInfo {};
       class showWeaponInfo {};

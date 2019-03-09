@@ -5,7 +5,7 @@ class CfgFunctions
     tag = "grad_minui";
     class main
     {
-      file = "\grad_minui_main\functions";
+      file = "x\grad_minui\addons\main\functions";
       class EHgetIn {};
       class EHgetOut {};
       class EHseatSwitched {};

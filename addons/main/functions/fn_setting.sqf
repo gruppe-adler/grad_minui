@@ -16,7 +16,7 @@
  * Public: No
  */
 
-#include "\grad_minui_main\SETTINGS.hpp"
+#include "..\SETTINGS.hpp"
 
 params ["_settingName"];
 

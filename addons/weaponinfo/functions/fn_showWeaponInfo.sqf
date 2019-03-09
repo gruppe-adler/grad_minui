@@ -17,8 +17,8 @@
  * Public: No
  */
 
-#define DASH_025 "<img image='\grad_minui_weaponInfo\data\dash25_ca.paa' />"
-#define DASH_100 "<img image='\grad_minui_weaponInfo\data\dash100_ca.paa' />"
+#define DASH_025 "<img image='x\grad_minui\addons\weaponInfo\data\dash25_ca.paa' />"
+#define DASH_100 "<img image='x\grad_minui\addons\weaponInfo\data\dash100_ca.paa' />"
 
 params ["_type"];
 
