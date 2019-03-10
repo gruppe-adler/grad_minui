@@ -1,3 +1,5 @@
+#!/bin/sh
+
 toolsDir=$(realpath "$(pwd)/$(dirname $0)")
 baseDir=`dirname "${toolsDir}"`
 platform=`uname`
