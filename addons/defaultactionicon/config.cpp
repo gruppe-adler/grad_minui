@@ -14,6 +14,6 @@ class CfgPatches
 class grad_minui_cba
 {
 	#include "cbaSettings.hpp"
-}
+};
 
 #include "ui.hpp"

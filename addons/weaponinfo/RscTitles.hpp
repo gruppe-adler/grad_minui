@@ -17,10 +17,10 @@ class RscTitles
         type = 13;
         style = 0;
         colorBackground[] = {0,0,0,0};
-        x = 0.7 * safezoneW + safezoneX - pixelW * 5;
-        y = safezoneY + pixelH * 5;
-        w = 0.3 * safeZoneW;
-        h = 0.2 * safeZoneH;
+        x = "0.7 * safezoneW + safezoneX - pixelW * 5";
+        y = "safezoneY + pixelH * 5";
+        w = "0.3 * safeZoneW";
+        h = "0.2 * safeZoneH";
         size = 0.04;
         text = "";
         class Attributes
@@ -29,7 +29,7 @@ class RscTitles
           color = "#d8d8d8";
           align = "right";
           valign = "top";
-          shadow = false;
+          shadow = "false";
           shadowColor = "#ff0000";
           size = "0.8";
         };

@@ -15,7 +15,7 @@ class grad_minui_cba
 {
 	#include "cbaSettings.hpp"
 	#include "cbaKeybinds.hpp"
-}
+};
 
 #include "ui.hpp"
 #include "RscTitles.hpp"
