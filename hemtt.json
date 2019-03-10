@@ -8,6 +8,16 @@
         "LICENSE",
         "README.md"
     ],
-    "keyname": "grad_minui-{{version}}",
-    "signame": "grad_minui-{{version}}"
+    "keyname": "{{prefix}}-{{version}}",
+    "signame": "{{prefix}}-{{version}}",
+    "postbuild": [
+        "@translation",
+        "!test",
+        "echo \"hello\""
+    ],
+    "script": {
+        "test": {
+            "steps": ["echo \"test\"", "git status"]
+        }
+    }
 }
