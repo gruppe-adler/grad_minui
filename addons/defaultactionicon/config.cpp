@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 class CfgPatches
 {
 	class grad_minui_defaultactionicon
@@ -6,8 +8,8 @@ class CfgPatches
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"grad_minui_main"};
-		version = "0.1";
 		authors[] = {"DerZade", "Fusselwurm"};
+		VERSION_CONFIG;
 	};
 };
 
