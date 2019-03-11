@@ -7,14 +7,14 @@ class RscInGameUI
   {
     class WeaponInfoControlsGroupLeft: RscControlsGroup
     {
-      x = 2 * safeZoneW + safezoneX;
+      x = "2 * safeZoneW + safezoneX";
     };
   };
   class RscWeaponZeroing
   {
     class CA_Zeroing: RscText
     {
-      x = 2 * safeZoneW + safezoneX;
+      x = "2 * safeZoneW + safezoneX";
     };
   };
 };

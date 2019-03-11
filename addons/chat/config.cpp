@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 class CfgPatches
 {
 	class grad_minui_chat
@@ -6,8 +8,8 @@ class CfgPatches
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"grad_minui_main"};
-		version = "0.1";
 		author = "DerZade";
+		VERSION_CONFIG;
 	};
 };
 
@@ -16,4 +18,4 @@ class CfgPatches
 class grad_minui_cba
 {
 	#include "cbaSettings.hpp"
-}
+};

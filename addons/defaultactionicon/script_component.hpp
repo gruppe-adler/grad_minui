@@ -1,0 +1,1 @@
+#include "\x\grad_minui\addons\main\script_mod.hpp"
