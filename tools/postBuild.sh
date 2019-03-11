@@ -13,9 +13,6 @@ zipname="$name-v$version"
 
 echo "Packing $zipname"
 
-zip -r myfiles.zip mydir
-
-
 if [[ ${platform} == "Linux" ]]; then
 	tar -czf "$baseDir/releases/${zipname}.tar.gz" -C "${baseDir}/releases/${version}" "@${name}"
 	(cd ${baseDir}/releases/${version}; zip -r ${zipname}.zip "@${name}")
