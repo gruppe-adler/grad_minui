@@ -11,14 +11,6 @@
     "keyname": "{{prefix}}-{{version}}",
     "signame": "{{prefix}}-{{version}}",
     "releasebuild": [
-        "!postBuild"
-    ],
-    "script": {
-        "postBuild": {
-            "show_output": true,
-            "steps": [
-                "bash ./tools/postBuild.sh {{name}} {{prefix}} {{version}}"
-            ]
-        }
-    }
+        "@zip"
+    ]
 }
