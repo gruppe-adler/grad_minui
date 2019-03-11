@@ -20,13 +20,10 @@ fi
 if [[ $module != "" ]]; then
 	# build only selected PBOs
     "$hemttPath" build $module --force
-
-	exit 1
 else
 	# build whole mod
 	"$hemttPath" build --release --force --opts all
 
 	# remove all built PBOs
 	"$hemttPath" clean
-	rm -f "$baseDir"/optionals/*.pbo # HEMTT doesn't clean optionals direcory properly
 fi

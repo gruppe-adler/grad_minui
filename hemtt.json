@@ -10,14 +10,15 @@
     ],
     "keyname": "{{prefix}}-{{version}}",
     "signame": "{{prefix}}-{{version}}",
-    "postbuild": [
-        "@translation",
-        "!test",
-        "echo \"hello\""
+    "releasebuild": [
+        "!postBuild"
     ],
     "script": {
-        "test": {
-            "steps": ["echo \"test\"", "git status"]
+        "postBuild": {
+            "show_output": true,
+            "steps": [
+                "bash ./tools/postBuild.sh {{name}} {{prefix}} {{version}}"
+            ]
         }
     }
 }
