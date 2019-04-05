@@ -1,0 +1,16 @@
+{
+    "name": "grad_minui",
+    "prefix": "grad_minui",
+    "author": "DerZade",
+    "files": [
+        "mod.cpp",
+        "Adler.paa",
+        "LICENSE",
+        "README.md"
+    ],
+    "keyname": "{{prefix}}-{{version}}",
+    "signame": "{{prefix}}-{{version}}",
+    "releasebuild": [
+        "@zip"
+    ]
+}
