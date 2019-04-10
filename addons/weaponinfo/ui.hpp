@@ -10,7 +10,7 @@ class RscInGameUI
       x = "2 * safeZoneW + safezoneX";
     };
   };
-  class RscWeaponZeroing
+  class RscWeaponZeroing: RscUnitInfo
   {
     class CA_Zeroing: RscText
     {
