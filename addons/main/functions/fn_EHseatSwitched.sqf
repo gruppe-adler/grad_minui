@@ -23,7 +23,7 @@ params ["_unit"];
 if !([_unit] call grad_minui_fnc_isFFV) exitWith {
   [] call grad_minui_fnc_hideWeaponInfo;
   if (grad_minui_ffv) then {
-    ["grad_minui_veh", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+    ["grad_minui_ffv", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
     grad_minui_ffv = false;
   };
 };
@@ -39,4 +39,4 @@ grad_minui_throwable = currentThrowable _unit;
 grad_minui_zeroing = [] call grad_minui_fnc_FFVzeroing;
 grad_minui_ffv = true;
 
-["grad_minui_veh", "onEachFrame", grad_minui_fnc_onEachFrameFFV] call BIS_fnc_addStackedEventHandler;
+["grad_minui_ffv", "onEachFrame", grad_minui_fnc_onEachFrameFFV] call BIS_fnc_addStackedEventHandler;

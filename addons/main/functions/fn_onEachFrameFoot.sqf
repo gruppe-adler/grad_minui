@@ -1,8 +1,8 @@
 /*
- * Function: grad_minui_fnc_onEachFrameFFV
+ * Function: grad_minui_fnc_onEachFrameFoot
  * Author: DerZade
  *
- * Called upon each frame, while player is ffv. Checks for changes in weaponmode, zeroing, etc.
+ * Called upon each frame, while unit is on foot. Checks for changes in weaponmode, zeroing, ...
  *
  * Arguments:
  * NONE
@@ -15,9 +15,6 @@
  *
  * Public: No
  */
-
-// exit if player is turned in
-if !(isTurnedOut grad_minui_player) exitWith {};
 
 if !(grad_minui_magazine isEqualTo currentMagazine grad_minui_player) then {
   grad_minui_magazine = currentMagazine grad_minui_player;
@@ -39,7 +36,7 @@ if !(grad_minui_throwable isEqualTo (currentThrowable grad_minui_player)) then {
   ["throwable"] call grad_minui_fnc_showWeaponInfo;
 };
 
-if !(grad_minui_zeroing isEqualTo ([] call grad_minui_fnc_FFVzeroing)) then {
-  grad_minui_zeroing = ([] call grad_minui_fnc_FFVzeroing);
+if !(grad_minui_zeroing isEqualTo currentZeroing grad_minui_player) then {
+  grad_minui_zeroing = currentZeroing grad_minui_player;
   ["zeroing"] call grad_minui_fnc_showWeaponInfo;
 };

@@ -21,7 +21,7 @@
 params ["_unit", "", "", "", ["_postInit", false]];
 
 //remove onEachFrame-Handler
-["grad_minui", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+["grad_minui_foot", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 
 if (_postInit) then {
   grad_minui_ffv = false;

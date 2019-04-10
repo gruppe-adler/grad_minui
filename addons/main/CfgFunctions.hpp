@@ -6,12 +6,16 @@ class CfgFunctions
     class main
     {
       file = "x\grad_minui\addons\main\functions";
+      class deInitUnit {};
       class EHgetIn {};
       class EHgetOut {};
       class EHseatSwitched {};
+      class initUnit {};
       class isFFV {};
-      class onEachFrame {};
+      class onEachFrameFoot {};
       class onEachFrameFFV {};
+      class onEachFrameMain {};
+      class player {};
       class postInit {postInit = 1;};
       class registerCBAKeybinds {};
       class registerCBASettings {};
