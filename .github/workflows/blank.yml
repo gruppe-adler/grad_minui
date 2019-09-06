@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - uses: actions/checkout@master
     - uses: DerZade/gh-action-build-hemtt-mod@master
