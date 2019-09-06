@@ -9,5 +9,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: uname
+      run: uname
     - name: Build mod
       run: sh ./tools/build.sh
