@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: shit
     - uses: actions/checkout@v1
     - uses: DerZade/gh-action-build-hemtt-mod@master
     - name: Build mod
