@@ -10,3 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: DerZade/gh-action-build-hemtt-mod@master
+    - uses: actions/upload-artifact@master
+      with:
+        name: packed-mod
+        path: releases
