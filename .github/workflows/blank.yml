@@ -10,7 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: DerZade/gh-action-build-hemtt-mod@master
+      id: build
+    - run: echo The zipPath was ${{ steps.build.outputs.zip_path }}
     - uses: actions/upload-artifact@master
       with:
         name: packed-mod
-        path: releases
+        path: ${{ steps.build.outputs.zip_path }}
