@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - uses: DerZade/gh-action-build-hemtt-mod@0.1.1
     - uses: actions/checkout@v1
     - name: Build mod
       run: ./tools/hemtt build --release --force --opts all
