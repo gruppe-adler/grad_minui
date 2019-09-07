@@ -1,4 +1,4 @@
-name: Add to release
+name: 'Add to Release'
 
 on: [release]
 
