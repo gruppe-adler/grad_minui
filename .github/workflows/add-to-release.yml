@@ -14,7 +14,7 @@ jobs:
     - uses: Shopify/upload-to-release@1.0.0
       name: 'Add to release'
       with:
-        name: ${{ steps.build.outputs.zip_name }}
+        name: '${{ steps.build.outputs.zip_name }}.zip'
         path: ${{ steps.build.outputs.zip_path }}
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         content-type: application/zip
