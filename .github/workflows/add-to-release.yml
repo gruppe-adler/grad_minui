@@ -1,0 +1,17 @@
+name: 'Add to Release'
+
+on: [release]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+    steps:
+    - name: 'Checkout  the source code from GitHub'
+      uses: actions/checkout@master
+    - name: 'Build Mod with HEMTT'
+      uses: gruppe-adler/action-release-with-hemtt@1.0
+      id: build
+    - name: 'Upload to release'
+      uses: "JasonEtco/upload-to-release@master"
+      args: ${{ steps.build.outputs.zip_path }}
+      secrets: ["GITHUB_TOKEN"]
