@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@master
-    - uses: DerZade/gh-action-build-hemtt-mod@master
+    - name: 'Checkout repo from git'
+      uses: actions/checkout@master
+    - name: 'Build Mod with HEMTT'
+      uses: DerZade/gh-action-build-hemtt-mod@master
       id: build
-    - run: echo The zipPath was ${{ steps.build.outputs.zip_path }}
-    - run: echo The zipName was ${{ steps.build.outputs.zip_name }}
-    - run: ls ./releases
-    - uses: actions/upload-artifact@master
+    - name: 'Upload artifact'
+      uses: actions/upload-artifact@master
       with:
         name: ${{ steps.build.outputs.zip_name }}
         path: ${{ steps.build.outputs.zip_path }}
