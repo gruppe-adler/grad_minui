@@ -11,10 +11,10 @@ jobs:
     - name: 'Build Mod with HEMTT'
       uses: gruppe-adler/action-release-with-hemtt@1.0
       id: build
-    - name: 'Upload to release'
-      uses: Shopify/upload-to-release
-        with:
-          name: ${{ steps.build.outputs.zip_name }}
-          path: ${{ steps.build.outputs.zip_path }}
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          content-type: application/zip
+    - uses: Shopify/upload-to-release
+      name: 'Add to release'
+      with:
+        name: ${{ steps.build.outputs.zip_name }}
+        path: ${{ steps.build.outputs.zip_path }}
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        content-type: application/zip
