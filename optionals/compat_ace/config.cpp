@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class grad_minui_combat_ace
+	class grad_minui_compat_ace
 	{
 		units[] = {};
 		weapons[] = {};
