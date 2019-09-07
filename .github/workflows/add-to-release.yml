@@ -11,7 +11,7 @@ jobs:
     - name: 'Build Mod with HEMTT'
       uses: gruppe-adler/action-release-with-hemtt@1.0
       id: build
-    - uses: Shopify/upload-to-release
+    - uses: Shopify/upload-to-release@1.0.0
       name: 'Add to release'
       with:
         name: ${{ steps.build.outputs.zip_name }}
