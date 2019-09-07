@@ -12,8 +12,9 @@ jobs:
     - uses: DerZade/gh-action-build-hemtt-mod@master
       id: build
     - run: echo The zipPath was ${{ steps.build.outputs.zip_path }}
+    - run: echo The zipName was ${{ steps.build.outputs.zip_name }}
     - run: ls ./releases
     - uses: actions/upload-artifact@master
       with:
-        name: packed-mod
+        name: ${{ steps.build.outputs.zip_name }}
         path: ${{ steps.build.outputs.zip_path }}
