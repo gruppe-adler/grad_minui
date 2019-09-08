@@ -11,7 +11,4 @@
     ],
     "keyname": "{{prefix}}-{{version}}",
     "signame": "{{prefix}}-{{version}}",
-    "releasebuild": [
-        "@zip"
-    ]
 }
