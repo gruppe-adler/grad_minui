@@ -10,5 +10,5 @@
         "README.md"
     ],
     "keyname": "{{prefix}}-{{version}}",
-    "signame": "{{prefix}}-{{version}}",
+    "signame": "{{prefix}}-{{version}}"
 }
