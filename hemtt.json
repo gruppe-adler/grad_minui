@@ -2,6 +2,7 @@
     "name": "grad_minui",
     "prefix": "grad_minui",
     "author": "DerZade",
+    "folder_optionals": false,
     "files": [
         "mod.cpp",
         "Adler.paa",
