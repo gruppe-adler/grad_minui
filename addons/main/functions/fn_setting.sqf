@@ -27,7 +27,7 @@ private _settingWithPre = format ["grad_minui_%1", _settingName];
 private _settingIndex = [_SETTINGS, _settingName] call (uiNamespace getVariable "BIS_fnc_findInPairs");
 
 if (_settingIndex isEqualTo -1) exitWith {
-  ["No default value for setting '%1'", _settingName] call (uiNamespace getVariable "BIS_fnc_error");
+    ["No default value for setting '%1'", _settingName] call (uiNamespace getVariable "BIS_fnc_error");
 };
 
 private _defaultValue = (_SETTINGS select _settingIndex) select 1;

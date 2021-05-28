@@ -24,8 +24,8 @@ if (isNull _veh) exitWith {false}; //unit is on foot
 
 private _isFFV = false;
 {
-  _x params ["_curUnit","","","","_personTurret"];
-  if (_unit isEqualTo _curUnit) exitWith {_isFFV = _personTurret};
+    _x params ["_curUnit","","","","_personTurret"];
+    if (_unit isEqualTo _curUnit) exitWith {_isFFV = _personTurret};
 } forEach (fullCrew _veh);
 
 _isFFV

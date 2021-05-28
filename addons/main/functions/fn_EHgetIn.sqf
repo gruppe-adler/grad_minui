@@ -24,11 +24,11 @@ params ["_unit", "", "", "", ["_postInit", false]];
 ["grad_minui_foot", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 
 if (_postInit) then {
-  grad_minui_ffv = false;
+    grad_minui_ffv = false;
 };
 
 [_unit] call grad_minui_fnc_EHseatSwitched;
 
 if (_postInit) then {
-  ["all"] call grad_minui_fnc_showWeaponInfo;
+    ["all"] call grad_minui_fnc_showWeaponInfo;
 };

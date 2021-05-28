@@ -1,89 +1,89 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project name="grad_minui">
-	<Package name="weaponinfo">
-		<Container name="cba_settings">
-			<Key ID="STR_GRAD_MINUI_WEAPONINFO">
-				<Original>Weapon Info</Original>
-				<English>Weapon Info</English>
-				<German>Waffen-Info</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_SHOWONGETOUT">
-				<Original>Show when getting out of Vehicle</Original>
-				<English>Show when getting out of Vehicle</English>
-				<German>Beim Aussteigen anzeigen</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_SHOWONGETIN">
-				<Original>Show when getting into Vehicle</Original>
-				<English>Show when getting into Vehicle</English>
-				<German>Beim Einsteigen anzeigen</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_DURATION">
-				<Original>Duration</Original>
-				<English>Duration</English>
-				<German>Dauer</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_FADEOUTDURATION">
-				<Original>Fadeout Duration</Original>
-				<English>Fadeout Duration</English>
-				<German>Ausblendedauer</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_COLOR">
-				<Original>Color</Original>
-				<English>Color</English>
-				<German>Farbe</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_SHOWONGETOUT_TIP">
-				<Original>Show whole Weapon Info automatically when getting out of a vehicle.</Original>
-				<English>Show whole Weapon Info automatically when getting out of a vehicle.</English>
-				<German>Waffen-Info automatisch beim Aussteigen anzeigen.</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_SHOWONGETIN_TIP">
-				<Original>Show whole Weapon Info automatically when getting into a vehicle.</Original>
-				<English>Show whole Weapon Info automatically when getting into a vehicle.</English>
-				<German>Waffen-Info automatisch beim Einsteigen anzeigen.</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_DURATION_TIP">
-				<Original>Duration of Weapon Info being visible.</Original>
-				<English>Duration of Weapon Info being visible.</English>
-				<German>Dauer der Waffen-Info Sichtbarkeit.</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_FADEOUTDURATION_TIP">
-				<Original>Fadeout duration of weaponInfo.</Original>
-				<English>Fadeout duration of weaponInfo.</English>
-				<German>Dauer der Waffen-Info Ausblendung.</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_COLOR_TIP">
-				<Original>WeaponInfo Color</Original>
-				<Original>Weapon Info Color</Original>
-				<Original>Waffen-Info Farbe</Original>
-			</Key>
-		</Container>
-		<Container name="cba_keybinds">
-			<Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_ALL">
-				<Original>Show full Weapon Info</Original>
-				<English>Show full Weapon Info</English>
-				<German>Vollständige Waffen-Info anzeigen</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_ZEROING">
-				<Original>Show current Zeroing</Original>
-				<English>Show current Zeroing</English>
-				<German>Aktuelle Nullstellung anzeigen</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_MODE">
-				<Original>Show current fire-mode</Original>
-				<English>Show current fire-mode</English>
-				<German>Aktuellen Feuermodus anzeigen</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_THROWABLE">
-				<Original>Show selected Throwable</Original>
-				<English>Show selected Throwable</English>
-				<German>Aktuelles Wurfobjekt anzeigen</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_MAGAZINE">
-				<Original>Show loaded Magazine</Original>
-				<English>Show loaded Magazine</English>
-				<German>Geladenes Magazin anzeigen</German>
-			</Key>
-		</Container>
-	</Package>
+    <Package name="weaponinfo">
+        <Container name="cba_settings">
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO">
+                <Original>Weapon Info</Original>
+                <English>Weapon Info</English>
+                <German>Waffen-Info</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_SHOWONGETOUT">
+                <Original>Show when getting out of Vehicle</Original>
+                <English>Show when getting out of Vehicle</English>
+                <German>Beim Aussteigen anzeigen</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_SHOWONGETIN">
+                <Original>Show when getting into Vehicle</Original>
+                <English>Show when getting into Vehicle</English>
+                <German>Beim Einsteigen anzeigen</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_DURATION">
+                <Original>Duration</Original>
+                <English>Duration</English>
+                <German>Dauer</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_FADEOUTDURATION">
+                <Original>Fadeout Duration</Original>
+                <English>Fadeout Duration</English>
+                <German>Ausblendedauer</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_COLOR">
+                <Original>Color</Original>
+                <English>Color</English>
+                <German>Farbe</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_SHOWONGETOUT_TIP">
+                <Original>Show whole Weapon Info automatically when getting out of a vehicle.</Original>
+                <English>Show whole Weapon Info automatically when getting out of a vehicle.</English>
+                <German>Waffen-Info automatisch beim Aussteigen anzeigen.</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_SHOWONGETIN_TIP">
+                <Original>Show whole Weapon Info automatically when getting into a vehicle.</Original>
+                <English>Show whole Weapon Info automatically when getting into a vehicle.</English>
+                <German>Waffen-Info automatisch beim Einsteigen anzeigen.</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_DURATION_TIP">
+                <Original>Duration of Weapon Info being visible.</Original>
+                <English>Duration of Weapon Info being visible.</English>
+                <German>Dauer der Waffen-Info Sichtbarkeit.</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_FADEOUTDURATION_TIP">
+                <Original>Fadeout duration of weaponInfo.</Original>
+                <English>Fadeout duration of weaponInfo.</English>
+                <German>Dauer der Waffen-Info Ausblendung.</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_COLOR_TIP">
+                <Original>WeaponInfo Color</Original>
+                <Original>Weapon Info Color</Original>
+                <Original>Waffen-Info Farbe</Original>
+            </Key>
+        </Container>
+        <Container name="cba_keybinds">
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_ALL">
+                <Original>Show full Weapon Info</Original>
+                <English>Show full Weapon Info</English>
+                <German>Vollständige Waffen-Info anzeigen</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_ZEROING">
+                <Original>Show current Zeroing</Original>
+                <English>Show current Zeroing</English>
+                <German>Aktuelle Nullstellung anzeigen</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_MODE">
+                <Original>Show current fire-mode</Original>
+                <English>Show current fire-mode</English>
+                <German>Aktuellen Feuermodus anzeigen</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_THROWABLE">
+                <Original>Show selected Throwable</Original>
+                <English>Show selected Throwable</English>
+                <German>Aktuelles Wurfobjekt anzeigen</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WEAPONINFO_KEY_MAGAZINE">
+                <Original>Show loaded Magazine</Original>
+                <English>Show loaded Magazine</English>
+                <German>Geladenes Magazin anzeigen</German>
+            </Key>
+        </Container>
+    </Package>
 </Project>

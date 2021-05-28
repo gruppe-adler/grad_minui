@@ -22,13 +22,13 @@ params ["_unit", "", "", "", ["_postInit", false]];
 
 //show all info upon spawn
 if (['weaponInfo_showOnGetOut'] call grad_minui_fnc_setting || _postInit) then {
-  ["all"] call grad_minui_fnc_showWeaponInfo;
+    ["all"] call grad_minui_fnc_showWeaponInfo;
 };
 
 if !(isNil "grad_minui_ffv") then {
-  if (grad_minui_ffv) then {
-    ["grad_minui_ffv", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
-  };
+    if (grad_minui_ffv) then {
+        ["grad_minui_ffv", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+    };
 };
 
 //update variables

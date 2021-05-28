@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project name="grad_minui">
-	<Package name="stanceindicator">
-		<Container name="cba_settings">
-			<Key ID="STR_GRAD_MINUI_MAIN_MAY_HAVE_TO_RESTART">
-				<Original>You may need to restart your game to apply this setting.</Original>
-				<English>You may need to restart your game to apply this setting.</English>
-				<German>Du musst vielleicht dein Spiel neustarten um diese Einstellungen zu übernehmen.</German>
-			</Key>
-		</Container>
-	</Package>
+    <Package name="stanceindicator">
+        <Container name="cba_settings">
+            <Key ID="STR_GRAD_MINUI_MAIN_MAY_HAVE_TO_RESTART">
+                <Original>You may need to restart your game to apply this setting.</Original>
+                <English>You may need to restart your game to apply this setting.</English>
+                <German>Du musst vielleicht dein Spiel neustarten um diese Einstellungen zu übernehmen.</German>
+            </Key>
+        </Container>
+    </Package>
 </Project>

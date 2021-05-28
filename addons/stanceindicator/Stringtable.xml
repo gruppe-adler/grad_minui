@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project name="grad_minui">
-	<Package name="stanceindicator">
-		<Container name="cba_settings">
-			<Key ID="STR_GRAD_MINUI_STANCEINDICATOR">
-				<Original>Stance indicator</Original>
-				<English>Stance indicator</English>
-				<German>Haltungsanzeige</German>
-			</Key>
-      <Key ID="STR_GRAD_MINUI_STANCEINDICATOR_ENABLED">
-				<Original>Show Vanilla Stance indicator</Original>
-				<English>Show Vanilla Stance indicator</English>
-				<German>Vanilla Haltungsanzeige anzeigen</German>
-			</Key>
-		</Container>
-	</Package>
+    <Package name="stanceindicator">
+        <Container name="cba_settings">
+            <Key ID="STR_GRAD_MINUI_STANCEINDICATOR">
+                <Original>Stance indicator</Original>
+                <English>Stance indicator</English>
+                <German>Haltungsanzeige</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_STANCEINDICATOR_ENABLED">
+                <Original>Show Vanilla Stance indicator</Original>
+                <English>Show Vanilla Stance indicator</English>
+                <German>Vanilla Haltungsanzeige anzeigen</German>
+            </Key>
+        </Container>
+    </Package>
 </Project>

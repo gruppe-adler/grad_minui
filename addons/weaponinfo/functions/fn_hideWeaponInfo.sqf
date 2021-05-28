@@ -17,7 +17,7 @@
  */
 
 {
-  _x cutText ["","PLAIN"];
+    _x cutText ["","PLAIN"];
 } forEach grad_minui_wepaonInfo_cutlayers;
 
 //reset variable

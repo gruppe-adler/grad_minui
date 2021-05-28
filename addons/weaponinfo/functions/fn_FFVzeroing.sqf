@@ -24,17 +24,17 @@ disableSerialization;
 private _zeroCtrl = uiNamespace getVariable ["grad_minui_zeroingCtrl", controlNull];
 
 if (isNull _zeroCtrl) then {
-  //all "RscUnitInfo"-displays
-  private _unitInfoDisplays = (uiNamespace getVariable ["IGUI_displays", []]) select {_x getVariable ["BIS_fnc_initDisplay_configClass", ""] == "RscUnitInfo"};
+    //all "RscUnitInfo"-displays
+    private _unitInfoDisplays = (uiNamespace getVariable ["IGUI_displays", []]) select {_x getVariable ["BIS_fnc_initDisplay_configClass", ""] == "RscUnitInfo"};
 
-  //find the zeroing control in all displays
-  {
-    private _ctrl = _x displayCtrl 168;
-    if (!(isNull _ctrl) && ctrlClassName _ctrl isEqualTo "CA_Zeroing") exitWith {
-      uiNamespace setVariable ["grad_minui_zeroingCtrl", _ctrl];
-      _zeroCtrl = _ctrl;
-    };
-  } forEach _unitInfoDisplays;
+    //find the zeroing control in all displays
+    {
+        private _ctrl = _x displayCtrl 168;
+        if (!(isNull _ctrl) && ctrlClassName _ctrl isEqualTo "CA_Zeroing") exitWith {
+            uiNamespace setVariable ["grad_minui_zeroingCtrl", _ctrl];
+            _zeroCtrl = _ctrl;
+        };
+    } forEach _unitInfoDisplays;
 };
 
 parseNumber (ctrlText _zeroCtrl);

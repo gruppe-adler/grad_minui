@@ -19,8 +19,8 @@
 private _player = [] call grad_minui_fnc_player;
 
 if (!(grad_minui_player isEqualTo _player)) then {
-  [grad_minui_player] call grad_minui_fnc_deInitUnit;
+    [grad_minui_player] call grad_minui_fnc_deInitUnit;
 
-  grad_minui_player = _player;
-  [grad_minui_player] call grad_minui_fnc_initUnit;
+    grad_minui_player = _player;
+    [grad_minui_player] call grad_minui_fnc_initUnit;
 };
