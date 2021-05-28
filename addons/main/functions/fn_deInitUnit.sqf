@@ -26,7 +26,7 @@ _unit removeEventHandler ["SeatSwitchedMan", _ssEH];
 _unit removeEventHandler ["GetInMan", _giEH];
 _unit removeEventHandler ["GetOutMan", _goEH];
 
-_unit setVariable ["grad_minui_EHIDs", nil, true];
+_unit setVariable ["grad_minui_EHIDs", nil];
 
 ["grad_minui_ffv", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 ["grad_minui_foot", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
