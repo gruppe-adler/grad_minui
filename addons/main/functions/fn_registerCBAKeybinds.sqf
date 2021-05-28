@@ -15,7 +15,7 @@
  *
  * Public: No
  */
-#define MODDISPLAYNAME "GRAD minui"
+#include "../script_component.hpp"
 
 if !(isClass(configFile >> "CfgPatches" >> "cba_keybinding")) exitWith {};
 
