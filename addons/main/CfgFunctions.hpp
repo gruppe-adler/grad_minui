@@ -14,6 +14,7 @@ class CfgFunctions {
             class onEachFrameMain {};
             class player {};
             class postInit {postInit = 1;};
+            class preInit {preInit = 1;};
             class registerCBAKeybinds {};
             class registerCBASettings {};
             class setSetting {};

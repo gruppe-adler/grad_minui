@@ -2,7 +2,7 @@
  * Function: grad_minui_fnc_registerCBASettings
  * Author: DerZade
  *
- * Called by post init. Registers all CBA Settings
+ * Called by pre init. Registers all CBA settings.
  *
  * Arguments:
  * NONE

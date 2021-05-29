@@ -20,10 +20,6 @@
 private _displayClass = (allDisplays select 0) getVariable ["BIS_fnc_initDisplay_configClass", ""];
 if ((count allDisplays == 1) && (_displayClass isEqualTo "RscDisplayMain")) exitWith {};
 
-//register keybinds & Settings
-[] call grad_minui_fnc_registerCBAKeybinds;
-[] call grad_minui_fnc_registerCBASettings;
-
 grad_minui_wepaonInfo_cutlayers = [];
 grad_minui_player = objNull;
 
