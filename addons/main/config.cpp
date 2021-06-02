@@ -12,3 +12,9 @@ class CfgPatches {
 };
 
 #include "CfgFunctions.hpp"
+
+class Extended_PreInit_EventHandlers {
+    class grad_minui_main {
+        init = "call compile preprocessFileLineNumbers 'x\grad_minui\addons\main\XEH_preInit.sqf'";
+    };
+};
