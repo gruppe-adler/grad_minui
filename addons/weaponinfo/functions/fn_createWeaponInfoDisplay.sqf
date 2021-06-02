@@ -17,20 +17,22 @@
  * Public: No
  */
 
-disableSerialization;
-params ["_layer","_text"];
+params [
+	["_layer", "", [""]],
+	["_text", "", [""]]
+];
 
-//apply color
+// apply color
 private _color = (["weaponinfo_color"] call grad_minui_fnc_setting) call BIS_fnc_colorRGBAtoHTML;
 _text = format ["<t color='%1'>%2</t>",_color, _text];
 
-//layer name
+// layer name
 private _layerName = format ["grad_minui_weaponInfo_%1", toLower _layer];
 grad_minui_wepaonInfo_cutlayers pushBackUnique _layerName;
 
-//create display
+// create display
 _layerName cutRsc ["grad_minui_weaponInfo", "PLAIN"];
 private _disp = uiNamespace getVariable "grad_minui_weaponInfo";
 
-//add text 
+// add text 
 (_disp displayCtrl 1) ctrlSetStructuredText parseText _text;

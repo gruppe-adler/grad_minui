@@ -6,7 +6,7 @@
  * For more detailed info see: https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#SeatSwitchedMan
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * NONE
@@ -17,19 +17,24 @@
  * Public: No
  */
 
-params ["_unit"];
+params [
+    ["_unit", objNull, [objNull]]
+];
 
-//if unit isn't on a FFV position only the handler has to be removed
+if (isNull _unit) exitWith { ["Unit must not be null"] call BIS_fnc_error; };
+
+// if unit isn't on a FFV position only the handler has to be removed
 if !([_unit] call grad_minui_fnc_isFFV) exitWith {
+    ["grad_minui_ffv", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
     [] call grad_minui_fnc_hideWeaponInfo;
-    if (grad_minui_ffv) then {
-        ["grad_minui_ffv", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
-        grad_minui_ffv = false;
-    };
+    grad_minui_ffv = false;
 };
 
-//show info if player switched from non FFV to FFV and setting is enabled
-if (!(grad_minui_ffv) && ['weaponInfo_showOnGetIn'] call grad_minui_fnc_setting && isTurnedOut _unit) then {
+// we do not need to do anything if player already way on FFV position 
+if (grad_minui_ffv) exitWith {};
+
+// show info to player if desired
+if (['weaponInfo_showOnGetIn'] call grad_minui_fnc_setting) then {
     ["all"] call grad_minui_fnc_showWeaponInfo;
 };
 

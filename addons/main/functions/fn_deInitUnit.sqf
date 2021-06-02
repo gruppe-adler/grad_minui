@@ -5,7 +5,7 @@
  * De-initialize given unit. Removes EHs.
  *
  * Arguments:
- * NONE
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * NONE
@@ -16,10 +16,16 @@
  * Public: No
  */
 
-params ["_unit"];
+params [
+	["_unit", objNull, [objNull]]
+];
+
+if (isNull _unit) exitWith {};
 
 private _var = _unit getVariable ["grad_minui_EHIDs", []];
-if (count _var isEqualTo 0) exitWith {};
+if (count _var isNotEqualTo 3) exitWith {
+	["Couldn't find EH IDs."] call BIS_fnc_error;
+};
 
 _var params ["_ssEH", "_giEH", "_goEH"];
 _unit removeEventHandler ["SeatSwitchedMan", _ssEH];

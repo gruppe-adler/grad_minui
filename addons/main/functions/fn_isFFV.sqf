@@ -16,11 +16,16 @@
  * Public: No
  */
 
-params ["_unit"];
+
+params [
+	["_unit", objNull, [objNull]]
+];
+
+if (isNull _unit) exitWith { ["Unit must not be null"] call BIS_fnc_error; };
 
 private _veh = objectParent _unit;
 
-if (isNull _veh) exitWith {false}; //unit is on foot
+if (isNull _veh) exitWith {false}; // unit is on foot
 
 private _isFFV = false;
 {

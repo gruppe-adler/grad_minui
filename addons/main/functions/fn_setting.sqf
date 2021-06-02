@@ -22,7 +22,7 @@ params ["_settingName"];
 
 _settingName = toLower _settingName;
 
-private _settingWithPre = format ["grad_minui_%1", _settingName];
+private _settingWithPrefix = format ["grad_minui_%1", _settingName];
 
 private _settingIndex = [_SETTINGS, _settingName] call (uiNamespace getVariable "BIS_fnc_findInPairs");
 
@@ -32,7 +32,7 @@ if (_settingIndex isEqualTo -1) exitWith {
 
 private _defaultValue = (_SETTINGS select _settingIndex) select 1;
 
-private _profile = profileNamespace getVariable [_settingWithPre, _defaultValue];
+private _profile = profileNamespace getVariable [_settingWithPrefix, _defaultValue];
 
-//return
-missionNamespace getVariable [_settingWithPre, _profile];
+// return
+missionNamespace getVariable [_settingWithPrefix, _profile];
