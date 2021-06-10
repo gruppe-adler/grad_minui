@@ -1,18 +1,19 @@
 name: CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
-  build:
+  hemtt:
+    name: HEMTT
     runs-on: ubuntu-latest 
     steps:
     - name: 'Checkout  the source code from GitHub'
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
     - name: 'Build Mod with HEMTT'
-      uses: gruppe-adler/action-release-with-hemtt@1.0
+      uses: gruppe-adler/action-release-with-hemtt@2.1.2
       id: build
     - name: 'Upload artifact'
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v2
       with:
-        name: 'packed-mod'
-        path: ${{ steps.build.outputs.zip_path }}
+        name: ${{ steps.build.outputs.zip_name }}
+        path: ${{ steps.build.outputs.release_path }}
