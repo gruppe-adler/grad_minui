@@ -25,13 +25,9 @@ if (isNull _unit) exitWith { ["Unit must not be null"] call BIS_fnc_error; };
 
 // if unit isn't on a FFV position only the handler has to be removed
 if !([_unit] call grad_minui_fnc_isFFV) exitWith {
-    ["grad_minui_ffv", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+    ["grad_minui_weaponInfo", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
     [] call grad_minui_fnc_hideWeaponInfo;
-    grad_minui_ffv = false;
 };
-
-// we do not need to do anything if player already way on FFV position 
-if (grad_minui_ffv) exitWith {};
 
 // show info to player if desired
 if (['weaponInfo_showOnGetIn'] call grad_minui_fnc_setting) then {
@@ -41,7 +37,7 @@ if (['weaponInfo_showOnGetIn'] call grad_minui_fnc_setting) then {
 grad_minui_mode = currentWeaponMode _unit;
 grad_minui_muzzle = currentMuzzle _unit;
 grad_minui_throwable = currentThrowable _unit;
-grad_minui_zeroing = [] call grad_minui_fnc_FFVzeroing;
-grad_minui_ffv = true;
+grad_minui_zeroing = [_unit] call grad_minui_fnc_zeroing;
 
-["grad_minui_ffv", "onEachFrame", grad_minui_fnc_onEachFrameFFV] call BIS_fnc_addStackedEventHandler;
+// We don't care if there is already a handler, adding same type of EH with the same id will overwrite existing.
+["grad_minui_weaponInfo", "onEachFrame", grad_minui_fnc_onEachFrameWeaponInfo] call BIS_fnc_addStackedEventHandler;

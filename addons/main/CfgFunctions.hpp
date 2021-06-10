@@ -9,8 +9,6 @@ class CfgFunctions {
             class EHseatSwitched {};
             class initUnit {};
             class isFFV {};
-            class onEachFrameFoot {};
-            class onEachFrameFFV {};
             class onEachFrameMain {};
             class player {};
             class postInit {postInit = 1;};

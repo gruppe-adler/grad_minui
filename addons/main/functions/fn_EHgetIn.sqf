@@ -7,7 +7,6 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 4: Init (set to true when this is manually called in initUnit) <BOOL>
  *
  * Return Value:
  * NONE
@@ -19,19 +18,9 @@
  */
 
 params [
-    ["_unit", objNull, [objNull]],
-    "",
-    "",
-    "",
-    ["_init", false, [false]]
+    ["_unit", objNull, [objNull]]
 ];
 
 if (isNull _unit) exitWith { ["Unit must not be null"] call BIS_fnc_error; };
 
-["grad_minui_foot", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
-
 [_unit] call grad_minui_fnc_EHseatSwitched;
-
-if (_init) then {
-    ["all"] call grad_minui_fnc_showWeaponInfo;
-};

@@ -5,8 +5,9 @@ class CfgFunctions {
             file = "x\grad_minui\addons\weaponInfo\functions";
             class createWeaponInfoDisplay {};
             class hideWeaponInfo {};
+            class onEachFrameWeaponInfo {};
             class showWeaponInfo {};
-            class FFVzeroing {};
+            class zeroing {};
         };
     };
 };

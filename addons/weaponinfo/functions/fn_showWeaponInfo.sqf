@@ -117,11 +117,7 @@ switch (toLower _type) do {
         ["weaponMode", _text] call grad_minui_fnc_createWeaponInfoDisplay;
     };
     case ("zeroing"): { //******************************************************* ZEROING *************************************************************
-        private _text = format["<br/>%1m", currentZeroing grad_minui_player];
-
-        if !(isNull objectParent grad_minui_player) then {
-            _text = format["<br/>%1m", [] call grad_minui_fnc_FFVzeroing];
-        };
+        private _text = format["<br/>%1m", [grad_minui_player] call grad_minui_fnc_zeroing];
 
         ["zeroing", _text] call grad_minui_fnc_createWeaponInfoDisplay;
     };

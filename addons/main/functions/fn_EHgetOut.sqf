@@ -7,7 +7,6 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 4: Init (set to true when this is manually called in initUnit)  <BOOL>
  *
  * Return Value:
  * NONE
@@ -19,29 +18,23 @@
  */
 
 params [
-    ["_unit", objNull, [objNull]],
-    "",
-    "",
-    "",
-    ["_init", false, [false]]
+    ["_unit", objNull, [objNull]]
 ];
 
 if (isNull _unit) exitWith { ["Unit must not be null"] call BIS_fnc_error; };
-
-// show all info upon spawn / if desired by user
-if (_init || ['weaponInfo_showOnGetOut'] call grad_minui_fnc_setting) then {
-    ["all"] call grad_minui_fnc_showWeaponInfo;
-};
-
-["grad_minui_ffv", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 
 // update variables
 grad_minui_mode = currentWeaponMode _unit;
 grad_minui_muzzle = currentMuzzle _unit;
 grad_minui_throwable = currentThrowable _unit;
-grad_minui_zeroing = currentZeroing _unit;
+grad_minui_zeroing = [_unit] call grad_minui_fnc_zeroing;
 grad_minui_magazine = currentMagazine _unit;
-grad_minui_ffv = false;
 
-// init onEachFrame-Handler
-["grad_minui_foot", "onEachFrame", grad_minui_fnc_onEachFrameFoot] call BIS_fnc_addStackedEventHandler;
+// show all info upon spawn / if desired by user
+if (['weaponInfo_showOnGetOut'] call grad_minui_fnc_setting) then {
+    ["all"] call grad_minui_fnc_showWeaponInfo;
+};
+
+// init onEachFrame-Handler if unit sat on non FFV seat there may be none.
+// We don't care if there is already a handler, adding same type of EH with the same id will overwrite existing.
+["grad_minui_weaponInfo", "onEachFrame", grad_minui_fnc_onEachFrameWeaponInfo] call BIS_fnc_addStackedEventHandler;

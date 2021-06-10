@@ -38,4 +38,6 @@ if (isNull objectParent _unit) then {
 } else {
     //in vehicle
     [_unit, nil, nil, nil, true] call grad_minui_fnc_EHgetIn;
-}
+};
+
+["all"] call grad_minui_fnc_showWeaponInfo;
