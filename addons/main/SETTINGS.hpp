@@ -1,4 +1,4 @@
-private _SETTINGS = [
+private _SETTINGS = createHashMapFromArray [
     ["chat_enabled", false],
     ["chat_enabled_map", true],
     ["commandbar_enabled", false],

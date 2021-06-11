@@ -5,10 +5,10 @@
  * Helper function to return value of given setting. First checks missionNamespace (CBA Settings) and then profileNamespace. Fallback to default value.
  *
  * Arguments:
- * 0: setting <STRING>
+ * 0: Setting <STRING>
  *
  * Return Value:
- * setting value <ANY>
+ * Setting value <ANY>
  *
  * Example:
  * _isChatEnabled = ["chat_enabled"] call grad_minui_fnc_setting;
@@ -18,19 +18,20 @@
 
 #include "..\SETTINGS.hpp"
 
-params ["_settingName"];
+params [
+    ["_setting", "", [""]]
+];
 
-_settingName = toLower _settingName;
+_setting = toLower _setting;
 
-private _settingWithPrefix = format ["grad_minui_%1", _settingName];
+private _settingWithPrefix = format ["grad_minui_%1", _setting];
 
-private _settingIndex = [_SETTINGS, _settingName] call (uiNamespace getVariable "BIS_fnc_findInPairs");
-
-if (_settingIndex isEqualTo -1) exitWith {
-    ["No default value for setting '%1'", _settingName] call (uiNamespace getVariable "BIS_fnc_error");
+if !(_setting in _SETTINGS) exitWith {
+    ["Could not find setting '%1'", _setting] call (uiNamespace getVariable "BIS_fnc_error");
+    nil;
 };
 
-private _defaultValue = (_SETTINGS select _settingIndex) select 1;
+private _defaultValue = _SETTINGS get _setting;
 
 private _profile = profileNamespace getVariable [_settingWithPrefix, _defaultValue];
 

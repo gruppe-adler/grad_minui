@@ -2,10 +2,11 @@
  * Function: grad_minui_fnc_setSetting
  * Author: DerZade
  *
- * Sets given setting to given value. This only affects the profileNamespace, which will be overwritten by CBA_settings.
+ * Set setting to given value. This only affects the profileNamespace, which will be overwritten by CBA settings.
  *
  * Arguments:
- * 0: setting <STRING>
+ * 0: Setting <STRING>
+ * 1: Value <ANY>
  *
  * Return Value:
  * NONE
@@ -25,9 +26,9 @@ params [
 _setting = toLower _setting;
 private _settingWithPrefix = format ["grad_minui_%1", _setting];
 
-private _defaultIndex = [_SETTINGS, _setting] call BIS_fnc_findInPairs;
-if (_defaultIndex isEqualTo -1) exitWith {
-    ["No setting '%1'", _setting] call BIS_fnc_error;
+if !(_setting in _SETTINGS) exitWith {
+    ["Could not find setting '%1'", _setting] call BIS_fnc_error;
+    nil;
 };
 
 // if no value is provided -> reset var in profile
@@ -36,7 +37,7 @@ if ((count _this) isEqualTo 1) exitWith {
 };
 
 // make sure the datatype is coorect
-private _defaultValue = (_SETTINGS select _defaultIndex) select 1;
-private _value = param [1, nil, [_defaultValue], 4];
+private _defaultVal = _SETTINGS get _setting;
+private _value = param [1, nil, [_defaultVal], 4];
 
 profileNamespace setVariable [_settingWithPrefix, _value];
