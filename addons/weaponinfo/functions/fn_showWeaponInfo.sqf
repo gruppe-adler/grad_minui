@@ -132,7 +132,7 @@ switch (toLower _type) do {
         ["throwable", _text] call grad_minui_fnc_createWeaponInfoDisplay;
     };
     case ("magazine"): { //****************************************************** MAGAZINE ************************************************************
-        _magDisplayName = [configFile >> "CfgMagazines" >> (currentMagazine grad_minui_player), "DisplayNameShort", ""] call BIS_fnc_returnConfigEntry;
+        private _magDisplayName = [configFile >> "CfgMagazines" >> (currentMagazine grad_minui_player), "DisplayNameShort", ""] call BIS_fnc_returnConfigEntry;
         if (_magDisplayName isEqualTo "") exitWith{};
 
         // layer "weaponMode" to make sure this gets overwritten by the weaponMode display because this also shows the magazine
