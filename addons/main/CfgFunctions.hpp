@@ -12,8 +12,6 @@ class CfgFunctions {
             class onEachFrameMain {};
             class player {};
             class postInit {postInit = 1;};
-            class setSetting {};
-            class setting {};
         };
     };
 };

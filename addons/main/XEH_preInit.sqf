@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+#define MODDISPLAYNAME "GRAD MinUI"
+
 // init settings
 {
     private _component = configName _x;
@@ -27,7 +29,7 @@
 
         _params call CBA_fnc_addSetting;
     } forEach("true" configClasses _x);
-} forEach("true" configClasses (configfile >> "grad_minui_cba" >> "settings"));
+} forEach("true" configClasses (configfile >> QUOTE(MOD_CONFIG_CLASS_NAME) >> "settings"));
 
 // init keybinds
 {
@@ -41,4 +43,4 @@
             ""
         ] call CBA_fnc_addKeybind;
     } forEach ("true" configClasses _x);
-} forEach ("true" configClasses (configfile >> "grad_minui_cba" >> "keybinds"));
+} forEach ("true" configClasses (configfile >> QUOTE(MOD_CONFIG_CLASS_NAME) >> "keybinds"));

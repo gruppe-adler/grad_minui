@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Setting <STRING>
- * 1: Value <ANY>
+ * 1: Value (Optional; if nil setting will be reset to default) <ANY>
  *
  * Return Value:
  * NONE
@@ -16,9 +16,6 @@
  *
  * Public: No
  */
-
-#include "..\SETTINGS.hpp"
-
 params [
     ["_setting", "", [""]]
 ];
@@ -26,18 +23,15 @@ params [
 _setting = toLower _setting;
 private _settingWithPrefix = format ["grad_minui_%1", _setting];
 
-if !(_setting in _SETTINGS) exitWith {
-    ["Could not find setting '%1'", _setting] call BIS_fnc_error;
-    nil;
-};
-
 // if no value is provided -> reset var in profile
 if ((count _this) isEqualTo 1) exitWith {
     profileNamespace setVariable [_settingWithPrefix, nil];
 };
 
-// make sure the datatype is coorect
-private _defaultVal = _SETTINGS get _setting;
-private _value = param [1, nil, [_defaultVal], 4];
+private _default = [_setting] call grad_minui_fnc_settingDefault;
+if (isNil "_default") exitWith {}; // nil -> setting does not exists; settingDefault will show error
+
+// make sure the datatype is correct
+private _value = param [1, nil, [_default]];
 
 profileNamespace setVariable [_settingWithPrefix, _value];

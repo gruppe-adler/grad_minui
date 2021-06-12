@@ -5,4 +5,5 @@
 
 #define VERSION_CONFIG version = #VERSION; versionStr = #VERSION; versionAr[] = {VERSION_AR}
 
-#define MODDISPLAYNAME "GRAD MinUI"
+#define MOD_CONFIG_CLASS_NAME grad_minui_config
+#define QUOTE(var) #var

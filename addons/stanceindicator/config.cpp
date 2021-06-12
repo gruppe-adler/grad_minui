@@ -13,6 +13,6 @@ class CfgPatches {
 
 #include "ui.hpp"
 
-class grad_minui_cba {
+class MOD_CONFIG_CLASS_NAME {
     #include "cbaSettings.hpp"
 };
