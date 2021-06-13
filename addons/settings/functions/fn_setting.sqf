@@ -19,18 +19,20 @@ params [
     ["_setting", "", [""]]
 ];
 
-_setting = toLower _setting;
+with uiNamespace do {
+    _setting = toLower _setting;
 
-private _settingWithPrefix = format ["grad_minui_%1", _setting];
+    private _settingWithPrefix = format ["grad_minui_%1", _setting];
 
-private _mission = missionNamespace getVariable _settingWithPrefix;
-if !(isNil "_mission") exitWith {
-    _mission;
+    private _mission = missionNamespace getVariable _settingWithPrefix;
+    if !(isNil "_mission") exitWith {
+        _mission;
+    };
+
+    private _profile = profileNamespace getVariable _settingWithPrefix;
+    if !(isNil "_profile") exitWith {
+        _profile;
+    };
+
+    [_setting] call grad_minui_fnc_settingDefault;
 };
-
-private _profile = profileNamespace getVariable _settingWithPrefix;
-if !(isNil "_profile") exitWith {
-    _profile;
-};
-
-[_setting] call grad_minui_fnc_settingDefault;
