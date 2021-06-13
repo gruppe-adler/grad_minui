@@ -33,4 +33,4 @@ if !(isNil "_profile") exitWith {
     _profile;
 };
 
-[_setting] call grad_minui_fnc_getSettingDefault;
+[_setting] call grad_minui_fnc_settingDefault;
