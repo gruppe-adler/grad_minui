@@ -5,7 +5,7 @@ class settings {
             title = "$STR_GRAD_MINUI_DEFAULTACTIONICON_SIZE";
             type = "SLIDER";
             valueInfo = "[0, 2, 0, 2]";
-            tooltip = "$STR_GRAD_MINUI_MAIN_MAY_HAVE_TO_RESTART";
+            tooltip = "$STR_GRAD_MINUI_SETTINGS_NEEDS_GAME_RESTART";
             script = "{profileNameSpace setVariable ['grad_minui_defaultactionicon_size', _this];}";
         };
     };

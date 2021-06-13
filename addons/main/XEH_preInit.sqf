@@ -13,6 +13,7 @@
         private _tooltip = [_x, "tooltip", _title] call BIS_fnc_returnConfigEntry;
         private _valueInfo = [_x, "valueInfo"] call BIS_fnc_returnConfigEntry;
         private _script = [_x, "script", ""] call BIS_fnc_returnConfigEntry;
+        private _needsMissionRestart = ([_x, "needsMissionRestart", 0] call BIS_fnc_returnConfigEntry) isEqualTo 1;
 
         private _params = [
             format ["grad_minui_%1_%2", _component, configName _x],
@@ -20,11 +21,13 @@
             [_title, _tooltip],
             [MODDISPLAYNAME, _categoryName],
             call compile _valueInfo,
-            2
+            2,
+            nil,
+            _needsMissionRestart
         ];
 
         if (_script isNotEqualTo "") then {
-            _params pushBack (call compile _script);
+            _params set [6, call compile _script];
         };
 
         _params call CBA_fnc_addSetting;

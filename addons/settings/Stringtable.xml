@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="grad_minui">
+    <Package name="settings">
+        <Container name="cba_settings">
+            <Key ID="STR_GRAD_MINUI_SETTINGS_NEEDS_GAME_RESTART">
+                <Original>You may need to restart your game to apply this setting.</Original>
+                <English>You may need to restart your game to apply this setting.</English>
+                <German>Du musst vielleicht dein Spiel neustarten um diese Einstellungen zu übernehmen.</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_SETTINGS_NEEDS_MISSION_RESTART">
+                <Original>You may need to restart the mission to apply this setting.</Original>
+                <English>You may need to restart the mission to apply this setting.</English>
+                <German>Du musst vielleicht die Mission neustarten um diese Einstellungen zu übernehmen.</German>
+            </Key>
+        </Container>
+    </Package>
+</Project>
