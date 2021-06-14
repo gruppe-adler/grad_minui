@@ -26,9 +26,10 @@
     href="https://www.youtube.com/user/gruppeadler">YouTube</a> | <a href="https://twitter.com/Gruppe_Adler">Twitter</a></strong></sup>
 </p>
 
-Gruppe Adler MinUI (GRAD_minui) is an interface mod for Arma 3 which removes some UI components and substitutes some of the vanilla elements with minimalistic replacements to improve immersion and reduce screen cluttering. At the moment this mod is aimed at infantry gameplay (including FFV).
+Gruppe Adler MinUI (GRAD_minui) is an interface mod for Arma 3 which removes some UI components and substitutes some of the vanilla elements with minimalist replacements to improve immersion and reduce screen cluttering. At the moment this mod is aimed at infantry game play (including FFV) only.
 
 ## Features
+- [Settings](https://github.com/DerZade/grad_minui/wiki/Settings) to undo/change the behavior of some of the changes below 
 - Removes chat (except when map is open)
 - Removes Command Bar
 - Removes DefaultAction-Icon
@@ -38,7 +39,6 @@ Gruppe Adler MinUI (GRAD_minui) is an interface mod for Arma 3 which removes som
   - Visible for two seconds (plus one second fade-out)
   - Only shows stats when the status changes (Fire-mode changes -> Only new fire-mode is shown)
   - Reacts to changes of zeroing, fire-mode, muzzle, magazines, and selected throwable
-- [Settings](https://github.com/DerZade/grad_minui/wiki/Settings) to undo/change the behavior of some of the changes above 
 - CBA keybinds to show partial or full Weapon Info
 - ACE compatibility
 - Zeus compatibility

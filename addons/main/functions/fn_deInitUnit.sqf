@@ -22,6 +22,8 @@ params [
 
 if (isNull _unit) exitWith {};
 
+diag_log text format ["[GRAD] (minui) INFO: Deinitializing old unit: %1", _unit];
+
 private _var = _unit getVariable ["grad_minui_EHIDs", []];
 if (count _var isNotEqualTo 3) exitWith {
 	["Couldn't find EH IDs."] call BIS_fnc_error;
