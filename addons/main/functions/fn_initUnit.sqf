@@ -24,7 +24,7 @@ if (isNull _unit) exitWith { ["Unit must not be null"] call BIS_fnc_error; };
 
 diag_log text format ["[GRAD] (minui) INFO: Initializing new unit: %1", _unit];
 
-if ((_unit getVariable ["grad_minui_EHIDs", []]) isEqualTo []) exitWith {
+if ((_unit getVariable ["grad_minui_EHIDs", []]) isEqualTo []) then {
     private _ssEH = _unit addEventHandler ["SeatSwitchedMan", grad_minui_fnc_EHseatSwitched];
     private _giEH = _unit addEventHandler ["GetInMan", grad_minui_fnc_EHgetIn];
     private _goEH = _unit addEventHandler ["GetOutMan", grad_minui_fnc_EHgetOut];
