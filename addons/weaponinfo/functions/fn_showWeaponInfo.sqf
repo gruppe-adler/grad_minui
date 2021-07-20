@@ -62,9 +62,9 @@ switch (toLower _type) do {
                     case ("burst"): { MODE_BURST; };
                     case ("full"): { MODE_FULL; };
                     case ("fullauto"): { MODE_FULL; };
-                    case ("overfly"): { MODE_UNKNOWN; }; // https://i.imgur.com/nvIto2J.png
-                    case ("topdown"): { MODE_UNKNOWN; }; // https://i.imgur.com/C7ZlBAo.png
-                    case ("fastauto"): { MODE_FULL; }; // https://i.imgur.com/l4JpIWT.png
+                    case ("overfly"): { MODE_UNKNOWN; }; // TODO: https://i.imgur.com/nvIto2J.png
+                    case ("topdown"): { MODE_UNKNOWN; }; // TODO: https://i.imgur.com/C7ZlBAo.png
+                    case ("fastauto"): { MODE_FULL; }; // TODO: https://i.imgur.com/l4JpIWT.png
                     default {
                         MODE_UNKNOWN;
                     };
