@@ -25,7 +25,8 @@
 #define WEAPON_MODE(dash1,dash2,dash3,dash4,dash5) dash1##dash2##dash3##dash4##dash5
 
 #define MODE_SINGLE QUOTE(WEAPON_MODE(DASH_025,DASH_025,DASH_025,DASH_025,DASH_100))
-#define MODE_BURST QUOTE(WEAPON_MODE(DASH_025,DASH_025,DASH_025,DASH_100,DASH_100))
+#define MODE_BURST QUOTE(WEAPON_MODE(DASH_025,DASH_025,DASH_100,DASH_100,DASH_100))
+#define MODE_DUAL QUOTE(WEAPON_MODE(DASH_025,DASH_025,DASH_025,DASH_100,DASH_100))
 #define MODE_FULL QUOTE(WEAPON_MODE(DASH_100,DASH_100,DASH_100,DASH_100,DASH_100))
 #define MODE_UNKNOWN QUOTE(WEAPON_MODE(DASH_025,DASH_025,DASH_025,DASH_025,DASH_025))
 
@@ -49,31 +50,21 @@ switch (toLower _type) do {
 
         // dashes
         private _text = switch (_currentWeaponMode) do {
-            case ("single"): {
-                MODE_SINGLE;
-            };
-            case ("burst"): {
-                MODE_BURST;
-            };
-            case ("fullauto"): {
-                MODE_FULL;
-            };
+            case ("single"): { MODE_SINGLE; };
+            case ("burst"): { MODE_BURST; };
+            case ("fullauto"): { MODE_FULL; };
             // if the weaponmode is non of the above we will check the config
             default {
-                private _textureType = [configFile >> "CfgWeapons" >> (currentMuzzle grad_minui_player) >> _currentWeaponMode, "textureType", ""] call BIS_fnc_returnConfigEntry;
+                private _textureType = toLower ([configFile >> "CfgWeapons" >> (currentMuzzle grad_minui_player) >> _currentWeaponMode, "textureType", ""] call BIS_fnc_returnConfigEntry);
                 switch (_textureType) do {
-                    case ("semi"): {
-                        MODE_SINGLE;
-                    };
-                    case ("dual"): {
-                        MODE_BURST;
-                    };
-                    case ("full"): {
-                        MODE_FULL;
-                    };
-                    case ("fullAuto"): {
-                        MODE_FULL;
-                    };
+                    case ("semi"): { MODE_SINGLE; };
+                    case ("dual"): { MODE_DUAL; };
+                    case ("burst"): { MODE_BURST; };
+                    case ("full"): { MODE_FULL; };
+                    case ("fullauto"): { MODE_FULL; };
+                    case ("overfly"): { MODE_UNKNOWN; }; // https://i.imgur.com/nvIto2J.png
+                    case ("topdown"): { MODE_UNKNOWN; }; // https://i.imgur.com/C7ZlBAo.png
+                    case ("fastauto"): { MODE_FULL; }; // https://i.imgur.com/l4JpIWT.png
                     default {
                         MODE_UNKNOWN;
                     };
