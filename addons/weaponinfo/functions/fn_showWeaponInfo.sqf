@@ -71,6 +71,9 @@ switch (toLower _type) do {
                     case ("full"): {
                         MODE_FULL;
                     };
+                    case ("fullAuto"): {
+                        MODE_FULL;
+                    };
                     default {
                         MODE_UNKNOWN;
                     };
