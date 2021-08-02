@@ -137,6 +137,6 @@ switch (toLower _type) do {
         ["zeroing"] call grad_minui_fnc_showWeaponInfo;
     };
     default {
-    	["Unknown type '%1'.", _type] call BIS_fnc_error;
+        ["Unknown type '%1'.", _type] call BIS_fnc_error;
     };
 };
