@@ -16,7 +16,7 @@
  * Public: No
  */
 
-//check wether main menu is open
+// check whether main menu is open
 private _displayClass = (allDisplays select 0) getVariable ["BIS_fnc_initDisplay_configClass", ""];
 if ((count allDisplays isEqualTo 1) && (_displayClass isEqualTo "RscDisplayMain")) exitWith {};
 

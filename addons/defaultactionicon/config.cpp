@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = 0.1;
-        requiredAddons[] = {"grad_minui_main"};
+        requiredAddons[] = {"grad_minui_main", "grad_minui_settings"};
         authors[] = {"DerZade", "Fusselwurm"};
         VERSION_CONFIG;
     };

@@ -65,23 +65,22 @@ switch (toLower _type) do {
                     case ("overfly"): { MODE_UNKNOWN; }; // TODO: https://i.imgur.com/nvIto2J.png
                     case ("topdown"): { MODE_UNKNOWN; }; // TODO: https://i.imgur.com/C7ZlBAo.png
                     case ("fastauto"): { MODE_FULL; }; // TODO: https://i.imgur.com/l4JpIWT.png
-                    default {
-                        MODE_UNKNOWN;
-                    };
+                    default { MODE_UNKNOWN; };
                 };
             };
         };
 
+        // TODO: ACE Safemode seem's to be shown permanently. WHY? 
         // ace safemode
         if (isClass(configFile >> "CfgPatches" >> "ace_safemode")) then {
             private _safedWeapons = +(grad_minui_player getVariable ["ACE_safemode_safedWeapons",[]]);
             _safedWeapons = _safedWeapons apply {toLower _x};
             if (_currentWeapon in _safedWeapons) then {
                 // ace needs some time to update the variable so in the worst case the weapon will be displayed as safed although it isn't
-                // so we're going to check for the next 0.1 seconds and call this function again if anything changed
+                // so we're going to check for the next 0.2 seconds and call this function again if anything changed
                 [
                     {(_this select 0) isNotEqualTo ((_this select 1) getVariable ["ACE_safemode_safedWeapons",[]])},
-                    {["mode"] remoteExec ["grad_minui_fnc_showWeaponInfo", (_this select 1)];},
+                    { ["mode"] call grad_minui_fnc_showWeaponInfo; },
                     [_safedWeapons, grad_minui_player],
                     0.2,
                     {}
@@ -91,7 +90,7 @@ switch (toLower _type) do {
         };
 
         // add muzzle and magazine to weapon mode if is other than primary muzzle of weapon (= is under barrel weapon)
-        if !(_currentMuzzle isEqualTo _currentWeapon) then {
+        if (_currentMuzzle isNotEqualTo _currentWeapon) then {
             private _muzzeleDisplayName = [configFile >> "CfgWeapons" >> _currentWeapon >> _currentMuzzle, "displayName", ""] call BIS_fnc_returnConfigEntry;
             
             _text = format ["%1   %2", _muzzeleDisplayName, _text];

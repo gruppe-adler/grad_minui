@@ -33,10 +33,10 @@ if ((_unit getVariable ["grad_minui_EHIDs", []]) isEqualTo []) then {
 };
 
 if (isNull objectParent _unit) then {
-    //on foot
+    // on foot
     [_unit] call grad_minui_fnc_EHgetOut;
 } else {
-    //in vehicle
+    // in vehicle
     [_unit] call grad_minui_fnc_EHgetIn;
 };
 
