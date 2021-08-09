@@ -54,8 +54,8 @@
             </Key>
             <Key ID="STR_GRAD_MINUI_WEAPONINFO_COLOR_TIP">
                 <Original>WeaponInfo Color</Original>
-                <Original>Weapon Info Color</Original>
-                <Original>Waffen-Info Farbe</Original>
+                <English>Weapon Info Color</English>
+                <German>Waffen-Info Farbe</German>
             </Key>
         </Container>
         <Container name="cba_keybinds">
