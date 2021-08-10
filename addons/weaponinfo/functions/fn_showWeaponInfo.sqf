@@ -41,6 +41,8 @@ params [
     ["_type", "", [""]]
 ];
 
+if !([grad_minui_player] call grad_minui_fnc_canUseWeapon) exitWith {};
+
 switch (toLower _type) do {
     case ("all"): {
         ["mode"] call grad_minui_fnc_showWeaponInfo;
