@@ -18,3 +18,9 @@ class Extended_PreInit_EventHandlers {
         init = "call compile preprocessFileLineNumbers 'x\grad_minui\addons\main\XEH_preInit.sqf'";
     };
 };
+
+class Extended_PostInit_EventHandlers {
+    class grad_minui_main {
+        init = "call compile preprocessFileLineNumbers 'x\grad_minui\addons\main\XEH_postInit.sqf'";
+    };
+};
