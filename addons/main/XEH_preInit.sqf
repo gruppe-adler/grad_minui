@@ -25,7 +25,7 @@
         ];
 
         if (_script isNotEqualTo "") then {
-            _params set [6, call compile _script];
+            _params set [6, compile _script];
         };
 
         _params call CBA_fnc_addSetting;

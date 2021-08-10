@@ -26,6 +26,7 @@ private _settingWithPrefix = format ["grad_minui_%1", _setting];
 // if no value is provided -> reset var in profile
 if ((count _this) isEqualTo 1) exitWith {
     profileNamespace setVariable [_settingWithPrefix, nil];
+    saveProfileNamespace;
 };
 
 private _default = [_setting] call grad_minui_fnc_settingDefault;
@@ -35,3 +36,4 @@ if (isNil "_default") exitWith {}; // nil -> setting does not exists; settingDef
 private _value = param [1, nil, [_default]];
 
 profileNamespace setVariable [_settingWithPrefix, _value];
+saveProfileNamespace;

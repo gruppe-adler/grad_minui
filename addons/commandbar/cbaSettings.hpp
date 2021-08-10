@@ -6,7 +6,7 @@ class settings {
             tooltip = "$STR_GRAD_MINUI_SETTINGS_NEEDS_GAME_RESTART";
             type = "CHECKBOX";
             valueInfo = "false";
-            script = "{profileNamespace setVariable ['grad_minui_commandbar_enabled', _this];}";
+            script = "profileNamespace setVariable ['grad_minui_commandbar_enabled', _this]; saveProfileNamespace;";
         };
     };
 };
