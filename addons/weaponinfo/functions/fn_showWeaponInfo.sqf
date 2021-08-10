@@ -44,12 +44,12 @@ switch (toLower _type) do {
     case ("mode"): { //********************************************************** MODE ****************************************************************
         if (currentWeaponMode grad_minui_player isEqualType 0) exitWith {};
 
-        private _currentWeaponMode = tolower currentWeaponMode grad_minui_player;
-        private _currentWeapon = tolower currentWeapon grad_minui_player;
-        private _currentMuzzle = toLower currentMuzzle grad_minui_player;
+        private _currentWeaponMode = currentWeaponMode grad_minui_player;
+        private _currentWeapon = currentWeapon grad_minui_player;
+        private _currentMuzzle = currentMuzzle grad_minui_player;
 
         // dashes
-        private _text = switch (_currentWeaponMode) do {
+        private _text = switch (toLower _currentWeaponMode) do {
             case ("single"): { MODE_SINGLE; };
             case ("burst"): { MODE_BURST; };
             case ("fullauto"): { MODE_FULL; };
@@ -70,21 +70,21 @@ switch (toLower _type) do {
             };
         };
 
-        // TODO: ACE Safemode seem's to be shown permanently. WHY? 
         // ace safemode
-        if (isClass(configFile >> "CfgPatches" >> "ace_safemode")) then {
+        if (isClass (configFile >> "CfgPatches" >> "ace_safemode")) then {
             private _safedWeapons = +(grad_minui_player getVariable ["ACE_safemode_safedWeapons",[]]);
-            _safedWeapons = _safedWeapons apply {toLower _x};
-            if (_currentWeapon in _safedWeapons) then {
-                // ace needs some time to update the variable so in the worst case the weapon will be displayed as safed although it isn't
-                // so we're going to check for the next 0.2 seconds and call this function again if anything changed
-                [
-                    {(_this select 0) isNotEqualTo ((_this select 1) getVariable ["ACE_safemode_safedWeapons",[]])},
-                    { ["mode"] call grad_minui_fnc_showWeaponInfo; },
-                    [_safedWeapons, grad_minui_player],
-                    0.2,
-                    {}
-                ] call CBA_fnc_waitUntilAndExecute;
+            private _isSafed = _currentWeapon in _safedWeapons;
+
+            // ace needs some time to update the variable so in the worst case the weapon will be displayed as safed although it isn't
+            // so we're going to check for the next 0.2 seconds and call this function again if anything changed
+            [
+                { params ["_isSafed", "_weapon", "_unit"]; _isSafed isNotEqualTo (_weapon in (_unit getVariable ["ACE_safemode_safedWeapons",[]]))},
+                { ["mode"] call grad_minui_fnc_showWeaponInfo; },
+                [_isSafed, _currentWeapon, grad_minui_player],
+                0.2
+            ] call CBA_fnc_waitUntilAndExecute;
+
+            if (_isSafed) then {
                 _text = MODE_UNKNOWN;
             };
         };
