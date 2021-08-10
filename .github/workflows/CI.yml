@@ -52,4 +52,4 @@ jobs:
         python -m pip install https://github.com/jokoho48/sqf/archive/39c93cdb8fee84236f2766a006cd66fae8acce17.tar.gz
     - name: Lint
       run: |
-        sqflint -d . -e e
+        sqflint -d . -e w
