@@ -19,7 +19,7 @@
 
 // react to setting changes
 ["CBA_SettingChanged", {
-    params ["_setting", "_value"];
+    params ["_setting"];
 
     _setting = toLower _setting;
 

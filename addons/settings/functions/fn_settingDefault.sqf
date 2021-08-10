@@ -20,7 +20,7 @@ params [
 ];
 
 with uiNamespace do {
-    _setting = toLower _setting;
+    private _setting = toLower _setting;
 
     if (isNil "grad_minui_settings_defaultCache") then {
         grad_minui_settings_defaultCache = createHashMap;
