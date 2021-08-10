@@ -19,8 +19,11 @@
 
 #define QUOTE(var) #var
 
-#define DASH_025 <img image='x\grad_minui\addons\weaponInfo\data\dash25_ca.paa' />
-#define DASH_100 <img image='x\grad_minui\addons\weaponInfo\data\dash100_ca.paa' />
+#define DASH_025 <img image='x\grad_minui\addons\weaponInfo\data\dash_25_ca.paa' />
+#define DASH_100 <img image='x\grad_minui\addons\weaponInfo\data\dash_100_ca.paa' />
+#define DASH_DOUBLE <img image='x\grad_minui\addons\weaponInfo\data\dash_double_ca.paa' />
+#define DASH_OVERFLY <img image='x\grad_minui\addons\weaponInfo\data\dash_overfly_ca.paa' />
+#define DASH_TOPDOWN <img image='x\grad_minui\addons\weaponInfo\data\dash_topdown_ca.paa' />
 
 #define WEAPON_MODE(dash1,dash2,dash3,dash4,dash5) dash1##dash2##dash3##dash4##dash5
 
@@ -28,8 +31,11 @@
 #define MODE_BURST QUOTE(WEAPON_MODE(DASH_025,DASH_025,DASH_100,DASH_100,DASH_100))
 #define MODE_DUAL QUOTE(WEAPON_MODE(DASH_025,DASH_025,DASH_025,DASH_100,DASH_100))
 #define MODE_FULL QUOTE(WEAPON_MODE(DASH_100,DASH_100,DASH_100,DASH_100,DASH_100))
+#define MODE_SAFE QUOTE(WEAPON_MODE(DASH_025,DASH_025,DASH_025,DASH_025,DASH_025))
 #define MODE_UNKNOWN QUOTE(WEAPON_MODE(DASH_025,DASH_025,DASH_025,DASH_025,DASH_025))
-
+#define MODE_FAST QUOTE(WEAPON_MODE(DASH_DOUBLE,DASH_DOUBLE,DASH_DOUBLE,DASH_DOUBLE,DASH_DOUBLE))
+#define MODE_OVERFLY QUOTE(WEAPON_MODE(DASH_025,DASH_025,DASH_025,DASH_025,DASH_OVERFLY))
+#define MODE_TOPDOWN QUOTE(WEAPON_MODE(DASH_025,DASH_025,DASH_025,DASH_025,DASH_TOPDOWN))
 
 params [
     ["_type", "", [""]]
@@ -62,9 +68,9 @@ switch (toLower _type) do {
                     case ("burst"): { MODE_BURST; };
                     case ("full"): { MODE_FULL; };
                     case ("fullauto"): { MODE_FULL; };
-                    case ("overfly"): { MODE_UNKNOWN; }; // TODO: https://i.imgur.com/nvIto2J.png
-                    case ("topdown"): { MODE_UNKNOWN; }; // TODO: https://i.imgur.com/C7ZlBAo.png
-                    case ("fastauto"): { MODE_FULL; }; // TODO: https://i.imgur.com/l4JpIWT.png
+                    case ("overfly"): { MODE_OVERFLY; };
+                    case ("topdown"): { MODE_TOPDOWN; };
+                    case ("fastauto"): { MODE_FAST; };
                     default { MODE_UNKNOWN; };
                 };
             };
@@ -85,7 +91,7 @@ switch (toLower _type) do {
             ] call CBA_fnc_waitUntilAndExecute;
 
             if (_isSafed) then {
-                _text = MODE_UNKNOWN;
+                _text = MODE_SAFE;
             };
         };
 
