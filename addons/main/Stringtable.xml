@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="grad_minui">
+    <Package name="main">
+        <Container name="cba_settings">
+            <Key ID="STR_GRAD_MINUI_WARNING_MISSION_RESTART">
+                <Original>The following settings may require a &lt;t color='#6CAACC'&gt;mission restart&lt;/t&gt; to be applied:</Original>
+                <English>The following settings may require a &lt;t color='#6CAACC'&gt;mission restart&lt;/t&gt; to be applied:</English>
+                <German>Die folgenden Einstellungen benötigen evtl. einen &lt;t color='#6CAACC'&gt;Neustart der Mission&lt;/t&gt; um angwendet zu werden:</German>
+            </Key>
+            <Key ID="STR_GRAD_MINUI_WARNING_GAME_RESTART">
+                <Original>The following settings may require a &lt;t color='#6CAACC'&gt;game restart&lt;/t&gt; to be applied:</Original>
+                <English>The following settings may require a &lt;t color='#6CAACC'&gt;game restart&lt;/t&gt; to be applied:</English>
+                <German>Die folgenden Einstellungen benötigen evtl. einen &lt;t color='#6CAACC'&gt;Neustart des Spiels&lt;/t&gt; um angwendet zu werden:</German>
+            </Key>
+        </Container>
+    </Package>
+</Project&gt;
