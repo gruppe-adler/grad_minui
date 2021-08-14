@@ -5,14 +5,14 @@ on: [push, pull_request]
 jobs:
   hemtt:
     name: Build with HEMTT
-    runs-on: ubuntu-latest 
+    runs-on: windows-latest
     steps:
-    - name: 'Checkout  the source code from GitHub'
+    - name: Checkout repo
       uses: actions/checkout@v2
-    - name: 'Build Mod with HEMTT'
-      uses: gruppe-adler/action-release-with-hemtt@2.1.2
+    - name: Build with HEMTT
+      uses: gruppe-adler/action-release-with-hemtt@2.2.0
       id: build
-    - name: 'Upload artifact'
+    - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
         name: ${{ steps.build.outputs.zip_name }}
