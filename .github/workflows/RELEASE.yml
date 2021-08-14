@@ -30,7 +30,7 @@ jobs:
     - name: Build with HEMTT
       uses: gruppe-adler/action-release-with-hemtt@2.2.0
       id: build
-    - name: Upload mod
+    - name: Upload main mod
       uses: gruppe-adler/action-release-to-steam-ws@v1-beta
       with:
         file_id: '2574600875'
@@ -38,5 +38,15 @@ jobs:
         password: "${{ secrets.STEAM_PASSWORD }}"
         path: "${{ steps.build.outputs.release_path }}/@${{ steps.build.outputs.mod_name }}"
         name: "${{ steps.build.outputs.mod_name }}"
+        change_notes_title: "${{ github.event.release.name }}"
+        change_notes: "${{ github.event.release.body }}"
+    - name: Upload ACE compatibility mod
+      uses: gruppe-adler/action-release-to-steam-ws@v1-beta
+      with:
+        file_id: '2574699777'
+        username: "${{ secrets.STEAM_USERNAME }}"
+        password: "${{ secrets.STEAM_PASSWORD }}"
+        path: "${{ steps.build.outputs.release_path }}/@${{ steps.build.outputs.mod_name }}/compats/@grad_minui_compat_ace"
+        name: "grad_minui_compat_ace"
         change_notes_title: "${{ github.event.release.name }}"
         change_notes: "${{ github.event.release.body }}"
