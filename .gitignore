@@ -1,5 +1,7 @@
 .vscode/
-releases/
-build_keys/
-keys/
+
 *.pbo
+releases/*
+*.biprivatekey
+keys/*
+.hemtt/local
