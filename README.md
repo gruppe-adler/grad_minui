@@ -47,7 +47,7 @@ Gruppe Adler Minimalistic UI (grad_minui) is an interface mod for Arma 3 which r
 None 🙌 However, [CBA_A3](https://github.com/CBATeam/CBA_A3) is recommended for a lot of easy customization through settings and keybinds. 
 
 ## ACE3 Compatibility 
-If you're using ACE3 it is recommended to load the ACE3 compatiblity mod. Which can be found in the `compats` directory of the latest release or on the [Steam Workshop]().  
+If you're using ACE3 it is recommended to load the ACE3 compatiblity mod. Which can be found in the `compats` directory of the latest release or on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2574699777).  
 We also have a [list of tips](https://github.com/gruppe-adler/grad_minui/wiki/ACE3-Compatibility-Tips) for settings, keybinds etc. to ensure the ideal gameplay experience with ACE3.
 
 
