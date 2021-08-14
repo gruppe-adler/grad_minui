@@ -48,7 +48,7 @@ None 🙌 However, [CBA_A3](https://github.com/CBATeam/CBA_A3) is recommended fo
 
 ## ACE3 Compatibility 
 If you're using ACE3 it is recommended to load the ACE3 compatiblity mod. Which can be found in the `compats` directory of the latest release or on the [Steam Workshop]().  
-We also have a [list of tips](https://github.com/gruppe-adler/grad_minui/wiki/ACE3-Compatibility-Tips) for settings, keybinds etc. to ensure the ideal gameplay experience with Gruppe Adler Minimalistic UI and ACE3.
+We also have a [list of tips](https://github.com/gruppe-adler/grad_minui/wiki/ACE3-Compatibility-Tips) for settings, keybinds etc. to ensure the ideal gameplay experience with ACE3.
 
 
 ## License
