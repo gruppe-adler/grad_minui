@@ -54,7 +54,7 @@ This project is licensed under [**GRAD APLv1.1**](https://github.com/DerZade/gra
 Downloads can be found under [Releases](https://github.com/DerZade/grad_minui/releases).  
 
 #### Steam Workshop
-Subscribe to GRAD MinUI on [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2574600875) and automatically get the latest releases.
+Subscribe to Gruppe Adler Minimalistic UI on [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2574600875) and automatically get the latest releases.
 
 ## Documentation  
 You can check out the full documentation in our [GitHub Wiki](https://github.com/DerZade/grad_minui/wiki).

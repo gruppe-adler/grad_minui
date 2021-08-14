@@ -1,3 +1,3 @@
 #include "script_mod.hpp"
 
-#define MODDISPLAYNAME "GRAD MinUI"
+#define MODDISPLAYNAME "GRAD Minimalistic UI"
