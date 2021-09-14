@@ -6,6 +6,8 @@ class CfgFunctions {
             class canUseWeapon {};
             class createWeaponInfoDisplay {};
             class hideWeaponInfo {};
+            class enableWeaponInfo {};
+            class disableWeaponInfo {};
             class onEachFrameWeaponInfo {};
             class showWeaponInfo {};
             class zeroing {};

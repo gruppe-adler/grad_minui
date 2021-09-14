@@ -25,6 +25,3 @@ if (missionNamespace getVariable ["vn_cinematic_running", false]) exitWith {};
 
 grad_minui_wepaonInfo_cutlayers = [];
 grad_minui_player = objNull;
-
-// We don't care if there is already a handler, adding same type of EH with the same id will overwrite existing.
-["grad_minui_main", "onEachFrame", grad_minui_fnc_onEachFrameMain] call BIS_fnc_addStackedEventHandler;

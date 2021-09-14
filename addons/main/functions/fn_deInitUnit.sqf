@@ -36,5 +36,4 @@ _unit removeEventHandler ["GetOutMan", _goEH];
 
 _unit setVariable ["grad_minui_EHIDs", nil];
 
-// this will silently fail if there was no event hadler with given id and type
-["grad_minui_weaponInfo", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+[] call grad_minui_fnc_disableWeaponInfo;
