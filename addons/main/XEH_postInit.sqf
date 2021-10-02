@@ -55,7 +55,7 @@
 
                     if (count _texts < 1) exitWith {};
 
-                    hint parseText format ["<t size='1.5' color='#d18d1f' undeline='1'>Gruppe Adler Minimalistic UI</t><br/><br/>%1", _texts joinString "<br/><br/>"];
+                    hint parseText format ["<t size='1.5' color='#d18d1f' undeline='1'>Gruppe Adler Minimalist UI</t><br/><br/>%1", _texts joinString "<br/><br/>"];
 
                     grad_minui_restartSettings = nil;
                 },

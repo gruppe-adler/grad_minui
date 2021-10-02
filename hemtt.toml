@@ -1,10 +1,13 @@
-name = "grad_minui"
+name = "Gruppe Adler Minimalist UI"
 modname = "grad_minui"
 prefix = "grad_minui"
 author = "DerZade"
 files = [
     "mod.cpp",
-    "Adler.paa",
+    "logo_active_ca.paa",
+    "logo_ca.paa",
+    "overview_co.paa",
+    "logo_small_ca.paa",
     "LICENSE",
     "README.md"
 ]

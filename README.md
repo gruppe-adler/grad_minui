@@ -26,7 +26,7 @@
     href="https://www.youtube.com/user/gruppeadler">YouTube</a> | <a href="https://twitter.com/Gruppe_Adler">Twitter</a></strong></sup>
 </p>
 
-Gruppe Adler Minimalistic UI (grad_minui) is an interface mod for Arma 3 which removes some UI components and substitutes some of the vanilla elements with minimalist replacements to improve immersion and reduce screen cluttering. At the moment this mod is aimed at infantry game play (including FFV) only.
+Gruppe Adler Minimalist UI (grad_minui) is an interface mod for Arma 3 which removes some UI components and substitutes some of the vanilla elements with minimalist replacements to improve immersion and reduce screen cluttering. At the moment this mod is aimed at infantry game play (including FFV) only.
 
 ## Features
 - [Settings](https://github.com/DerZade/grad_minui/wiki/Settings) to undo/change the behavior of some of the changes below 
@@ -59,7 +59,7 @@ This project is licensed under [**GRAD APLv1.1**](https://github.com/DerZade/gra
 Downloads can be found under [Releases](https://github.com/DerZade/grad_minui/releases).  
 
 #### Steam Workshop
-Subscribe to Gruppe Adler Minimalistic UI on [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2574600875) and automatically get the latest releases.
+Subscribe to Gruppe Adler Minimalist UI on [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2574600875) and automatically get the latest releases.
 
 ## Documentation  
 You can check out the full documentation in our [GitHub Wiki](https://github.com/DerZade/grad_minui/wiki).
