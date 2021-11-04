@@ -15,7 +15,7 @@ class RscTitles {
                 y = "safezoneY + safezoneH / 2 - 0.1";
                 w = "0.2";
                 h = "safezoneH * 0.5";
-                class Attributes: Attributes {
+                class Attributes {
 					size = 0.8;
                     align = "center";
                 };
